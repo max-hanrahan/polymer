@@ -1,0 +1,1 @@
+/share/apps/CENTOS7/lammps/3Mar2020/lmp_serial < t0.5p0.0n8000npt.inp
