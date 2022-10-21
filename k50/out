@@ -1,18 +1,18 @@
-	linux-vdso.so.1 (0x00007fff509e5000)
-	libjpeg.so.62 => /lib64/libjpeg.so.62 (0x00007fc734262000)
-	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007fc734042000)
-	libdl.so.2 => /lib64/libdl.so.2 (0x00007fc733e3e000)
-	libutil.so.1 => /lib64/libutil.so.1 (0x00007fc733c3a000)
-	libmpi_cxx.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi_cxx.so.1 (0x00007fc733a20000)
-	libmpi.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi.so.1 (0x00007fc733744000)
-	libstdc++.so.6 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libstdc++.so.6 (0x00007fc733364000)
-	libm.so.6 => /lib64/libm.so.6 (0x00007fc732fe2000)
-	libgcc_s.so.1 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libgcc_s.so.1 (0x00007fc732dca000)
-	libc.so.6 => /lib64/libc.so.6 (0x00007fc732a05000)
-	/lib64/ld-linux-x86-64.so.2 (0x00007fc7344cb000)
-	libopen-rte.so.7 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-rte.so.7 (0x00007fc73278a000)
-	libopen-pal.so.6 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-pal.so.6 (0x00007fc7324a7000)
-	librt.so.1 => /lib64/librt.so.1 (0x00007fc73229f000)
+	linux-vdso.so.1 (0x00007ffe6b997000)
+	libjpeg.so.62 => /lib64/libjpeg.so.62 (0x00007f6ca757c000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f6ca735c000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007f6ca7158000)
+	libutil.so.1 => /lib64/libutil.so.1 (0x00007f6ca6f54000)
+	libmpi_cxx.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi_cxx.so.1 (0x00007f6ca6d3a000)
+	libmpi.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi.so.1 (0x00007f6ca6a5e000)
+	libstdc++.so.6 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libstdc++.so.6 (0x00007f6ca667e000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f6ca62fc000)
+	libgcc_s.so.1 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libgcc_s.so.1 (0x00007f6ca60e4000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f6ca5d1f000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f6ca77e5000)
+	libopen-rte.so.7 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-rte.so.7 (0x00007f6ca5aa4000)
+	libopen-pal.so.6 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-pal.so.6 (0x00007f6ca57c1000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007f6ca55b9000)
 LAMMPS (19 Mar 2020)
 Reading data file ...
   orthogonal box = (-10 -10 -10) to (10 10 10)
@@ -36,14 +36,14 @@ Finding 1-2 1-3 1-4 neighbors ...
   2 = max # of 1-3 neighbors
   4 = max # of 1-4 neighbors
   6 = max # of special neighbors
-  special bonds CPU = 0.000772953 secs
-  read_data CPU = 0.103684 secs
+  special bonds CPU = 0.000777006 secs
+  read_data CPU = 0.0227978 secs
 Finding 1-2 1-3 1-4 neighbors ...
   special bond factors lj:   0          1          1         
   special bond factors coul: 0          1          1         
   2 = max # of 1-2 neighbors
   6 = max # of special neighbors
-  special bonds CPU = 0.000300169 secs
+  special bonds CPU = 0.000294924 secs
 Neighbor list info ...
   update every 1 steps, delay 10 steps, check yes
   max neighbors/atom: 2000, page size: 100000
@@ -164,21 +164,21 @@ Step KinEng PotEng TotEng E_pair E_bond E_angle Press Temp Lx Volume
    98000   0.75944177    12.892164    13.651605   -5.5773116    18.412599  0.056876586   0.10629493   0.50635781    19.929513    7915.7131 
    99000   0.75417003     12.87141     13.62558   -5.5920567    18.405672  0.057794661 -0.016404189   0.50284288    19.924633    7909.9001 
   100000   0.75111514    12.866556    13.617671   -5.5950489     18.40391  0.057695414   -0.0333357   0.50080603      19.9271    7912.8391 
-Loop time of 134.228 on 8 procs for 100000 steps with 8000 atoms
+Loop time of 117.064 on 8 procs for 100000 steps with 8000 atoms
 
-Performance: 128736.614 tau/day, 745.004 timesteps/s
-97.8% CPU use with 8 MPI tasks x no OpenMP threads
+Performance: 147611.800 tau/day, 854.235 timesteps/s
+99.6% CPU use with 8 MPI tasks x no OpenMP threads
 
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 81.903     | 83.112     | 85.25      |  12.0 | 61.92
-Bond    | 3.5075     | 3.7111     | 4.0248     |   8.7 |  2.76
-Neigh   | 9.2131     | 9.2184     | 9.2266     |   0.2 |  6.87
-Comm    | 9.2884     | 11.416     | 12.768     |  33.7 |  8.50
-Output  | 20.911     | 20.911     | 20.912     |   0.0 | 15.58
-Modify  | 5.035      | 5.0756     | 5.1311     |   1.5 |  3.78
-Other   |            | 0.7839     |            |       |  0.58
+Pair    | 82.449     | 84.743     | 87.118     |  17.2 | 72.39
+Bond    | 3.5253     | 3.7064     | 3.9824     |   8.1 |  3.17
+Neigh   | 9.1075     | 9.1111     | 9.1159     |   0.1 |  7.78
+Comm    | 9.4639     | 11.67      | 13.978     |  44.7 |  9.97
+Output  | 1.9612     | 1.9614     | 1.962      |   0.0 |  1.68
+Modify  | 5.044      | 5.0884     | 5.1198     |   1.0 |  4.35
+Other   |            | 0.7833     |            |       |  0.67
 
 Nlocal:    1000 ave 1009 max 994 min
 Histogram: 2 0 2 1 0 1 0 0 1 1
@@ -192,4 +192,4 @@ Ave neighs/atom = 44.6634
 Ave special neighs/atom = 1.8
 Neighbor list builds = 4158
 Dangerous builds = 15
-Total wall time: 0:02:14
+Total wall time: 0:01:57
