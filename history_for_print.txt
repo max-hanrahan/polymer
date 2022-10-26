@@ -1,0 +1,1000 @@
+   15   sed -i 's/angle_coeff k   1/angle_coeff k/g' t0.5p0.0n8000npt.inp 
+   16  more t0.5p0.0n8000npt.inp
+   17   sed -i 's/angle_coeff k/angle_coeff/g' t0.5p0.0n8000npt.inp 
+   18  more t0.5p0.0n8000npt.inp
+   19  vim t0.5p0.0n8000npt.inp
+   20  cd ..
+   21  for dir in k*; cp k1/t0.5p0.0n8000npt.inp dir
+   22  for dir in k*; echo $dir
+   23  for dir in k*; echo dir
+   24  for dir in k*; printf dir; done;
+   25  for dir in k*; echo dir' done;
+   26  for dir in k*; echo dir;  done;
+   27  for dir in k*; echo $dir;  done;
+   28  for dir in k*; echo "aa"; done
+   29  for dir in k*; echo "aa"; done;
+   30  for dir in k*; do echo "aa"; done;
+   31  for dir in k*; do echo $dir; done;
+   32  for dir in k*; do cp k1/t0.5p0.0n8000npt.inp $dir; done;
+   33  for dir in k*; do cp -i k1/t0.5p0.0n8000npt.inp $dir; done;
+   34  more k2/t0.5p0.0n8000npt.inp
+   35  more k100/t0.5p0.0n8000npt.inp
+   36  cd k1 &&  sed -i 's/angle_coeff\tk/angle_coeff\t1/g' t0.5p0.0n8000npt.inp 
+   37  more t0.5p0.0n8000npt.inp
+   38   sed -i 's/angle_coeff\tk/angle_coeff	1/g' t0.5p0.0n8000npt.inp 
+   39  more t0.5p0.0n8000npt.inp
+   40   sed -i 's/angle_coeff     k/angle_coeff     1/g' t0.5p0.0n8000npt.inp 
+   41  more t0.5p0.0n8000npt.inp
+   42   sed -i 's/angle_coeff     k/angle_coeff     1/g' t0.5p0.0n8000npt.inp 
+   43  more
+   44  more t0.5p0.0n8000npt.inp
+   45  cd ..
+   46  for dir in k*; do sbatch \$\{dir\}/t0.5p0.0n8000npt.inp; done
+   47  for dir in k*; do sbatch ${\dir}/t0.5p0.0n8000npt.inp; done
+   48  for dir in k*; do sbatch ${\dir}/t0.5p0.0n8000npt.inp; done;
+   49  for dir in k*; do sbatch ${dir}/t0.5p0.0n8000npt.inp; done;
+   50  for dir in k*; do cd dir &&  sbatch t0.5p0.0n8000npt.inp && cd ..; done;
+   51  for dir in k*; do cd $dir &&  sbatch t0.5p0.0n8000npt.inp && cd ..; done;
+   52  ls
+   53  squeue
+   54  squeue -s
+   55  squeue -s NODELIST
+   56  squeue -sort k4
+   57  for dir in k*; do cd $dir &&  sbatch t0.5p0.0n8000npt.inp && cd ..; done;
+   58  cd ..
+   59  for dir in k*; do cd $dir &&  sbatch t0.5p0.0n8000npt.inp && cd ..; done;
+   60  for dir in k*; do cd $dir &&  sbatch t0.5p0.0n8000npt.inp && cd ../; done;
+   61  cd ..
+   62  for dir in k*; do cd $dir &&  sbatch t0.5p0.0n8000npt.inp && cd ../; done;
+   63  squeue
+   64  sbatch t0.5p0.0n8000npt.inp
+   65  more t0.5p0.0n8000npt.inp
+   66  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done;
+   67  cd ..
+   68  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done;
+   69  squeue
+   70  cd k1 &&  sed -i 's/ k / 1 /g' t0.5p0.0n8000npt.inp
+   71  more t0.5p0.0n8000npt.inp
+   72  cd ..
+   73  vim k1/t0.5p0.0n8000npt.inp
+   74  vim k2/t0.5p0.0n8000npt.inp
+   75  vim k5/t0.5p0.0n8000npt.inp
+   76  vim k10/t0.5p0.0n8000npt.inp
+   77  vim k20/t0.5p0.0n8000npt.inp
+   78  vim k50/t0.5p0.0n8000npt.inp
+   79  vim k100/t0.5p0.0n8000npt.inp
+   80  more k100/t0.5p0.0n8000npt.inp
+   81  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done;
+   82  squeue
+   83  cd k2
+   84  more cpu.sub
+   85  cd ..
+   86  for dir in k*; do cp -i cpu.sub ${dir}; done;
+   87  squeue
+   88  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done;
+   89  suque
+   90  squeue 
+   91  more k1/err
+   92  more k2/err
+   93  more k5/err
+   94  more k10/err
+   95  more k20/err
+   96  more k50/err
+   97  more k100/err
+   98  sbatch k2/ cpu.sub
+   99  sbatch k2/cpu.sub
+  100  sbatch k5/cpu.sub
+  101  sbatch k10/cpu.sub
+  102  squeue
+  103  sbatch k20/cpu.sub
+  104  sbatch k50/cpu.sub
+  105  sbatch k100/cpu.sub
+  106  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done;
+  107  squeue
+  108  for dir in k*; sbatch $dir/cpu.sub; done;
+  109  for dir in k*; sbatch dir/cpu.sub; done;
+  110  sbatch k1/cpu.sub
+  111  ls
+  112  cd k1
+  113  ls
+  114  more cpu.sub
+  115  cd .. && for dir in k*; sbatch dir/cpu.sub; done;
+  116  cd ..
+  117  cd k1 && sbatch cpu.sub && cd ..
+  118  squeue
+  119  clear
+  120  for dir in k*; echo $dir; done;
+  121  for dir in k*; do echo $dir; done;
+  122  for dir in k*; cd $dir && cd ..; done;
+  123  for dir in k*; cd $dir ||  cd ..; done;
+  124  for dir in k*; do  cd $dir | cd ..; done;
+  125  for dir in k*; do  cd $dir && cd ..; done;
+  126  for dir in k*; do cd $dir && sbatch cpu.sub  && cd ..; done;
+  127  squeue
+  128  cd k100
+  129  ls -lrt
+  130  more err
+  131  more log.lammps
+  132  more t0.5p0.0n8000npt.log
+  133  cd ../k10 && more t0.5p0.0n8000npt.log
+  134  cd ../k1 && more t0.5p0.0n8000npt.log
+  135  cd .. && for dir in k1; do cd $dir && sbatch cpu.sub  && cd ..; done;
+  136  squeue
+  137  cd k2
+  138  more t0.5p0.0n8000npt.inp
+  139  grep angle_coeff t0.5p0.0n8000npt.inp
+  140  grep angle_coeff t0.5p0.0n8000npt.inpcd ..
+  141  cd ..
+  142  more t0.5p0.0n8000npt.inp 
+  143  for dir in k*: cp -ir t0.5p0.0n8000npt.inp dir; ;done
+  144  for dir in k*: cp -ir t0.5p0.0n8000npt.inp dir; done;
+  145  for dir in k*: do cp -ir t0.5p0.0n8000npt.inp dir; done;
+  146  for dir in k*: do cp -ir t0.5p0.0n8000npt.inp dir; done
+  147  for dir in k*: do cp -i t0.5p0.0n8000npt.inp dir; done
+  148  for dir in k*: do cp -i t0.5p0.0n8000npt.inp $dir; done
+  149  for dir in k*: do cp -i t0.5p0.0n8000npt.inp ${dir}; done
+  150  for dir in k*: do cp -i t0.5p0.0n8000npt.inp ${dir}/; done
+  151  cd k1
+  152  sed -i s'/999.9/${1.0}/t0.5p0.0n8000npt.inp'
+  153  sed -i 's/999.9/${1.0}/g/' t0.5p0.0n8000npt.inp
+  154  sed -i 's/999.9/$1.0/g/' t0.5p0.0n8000npt.inp
+  155  sed -i 's/999.9/1.0/g/' t0.5p0.0n8000npt.inp
+  156  sed -i 's/999/1.0/g/' t0.5p0.0n8000npt.inp
+  157  sed -i s/999/1.0/g t0.5p0.0n8000npt.inp
+  158  more t0.5p0.0n8000npt
+  159  more t0.5p0.0n8000npt.inp
+  160  sed -i s/1.0.9/1.0/g t0.5p0.0n8000npt.inp
+  161  more t0.5p0.0n8000npt.inp
+  162  cd ..
+  163  cd k2 && sed -i s/999.9/2.0/g t0.5p0.0n8000npt.inp
+  164  cd ..
+  165  cd k5 && sed -i s/999.9/5.0/g t0.5p0.0n8000npt.inp && cd ..
+  166  cd k10 && sed -i s/999.9/10.0/g t0.5p0.0n8000npt.inp && cd ..
+  167  cd k20 && sed -i s/999.9/20.0/g t0.5p0.0n8000npt.inp && cd ..
+  168  cd k50 && sed -i s/999.9/50.0/g t0.5p0.0n8000npt.inp && cd ..
+  169  cd k100 && sed -i s/999.9/100.0/g t0.5p0.0n8000npt.inp && cd ..
+  170  cd k100
+  171  more t0.5p0.0n8000npt.inp
+  172  cd .. && for dir in k*: do cd $dir && sbatch cpu.sub && cd .. ; done
+  173  cd ..
+  174  squeue
+  175  for dir in k*: do cd $dir && sbatch cpu.sub && cd .. ; done;
+  176  for dir in k*: do cd ${dir} && sbatch cpu.sub && cd .. ; done
+  177  for dir in k*; do cd $dir && sbatch cpu.sub  && cd ..; done;
+  178  squeue
+  179  cd k100
+  180  ls *.dat
+  181  xmgrace -nxy lj.dat # loads in all data
+  182  ls
+  183  cd polymer/k1
+  184  xmgrace -nxy lj.dat # loads in all data
+  185  xmgrace -nxy t0.5p0.0n8000npt.dat # loads in all data
+  186  ls
+  187  cd polymer/
+  188  l
+  189  ls
+  190  for dir in k*; do sed  t0.5p0.0n8000npt.inp
+  191  for dir in k*; do  k=$(echo $dir | cut -c 2-);  sed s/xxx/${k}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp ; done
+  192  more k10/t0.5p0.0n8000npt.inp 
+  193  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories.
+  194  squeue
+  195  for dir in k*; do  k=$(echo $dir | cut -c 2-);  sed s/xxx/${k}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp ; done
+  196  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories.
+  197  squeue
+  198  sh ~fstarr/bin/extract-data.sh k1/t0.5p0.0n8000npt.log
+  199  sh ~fstarr/bin/extract-data.sh k*/t0.5p0.0n8000npt.log
+  200  ls
+  201  ls -lrt  k1
+  202  sh ~fstarr/bin/extract-data.sh k1/t0.5p0.0n8000npt.log
+  203  sh ~fstarr/bin/extract-data.sh k2/t0.5p0.0n8000npt.log
+  204  sh ~fstarr/bin/extract-data.sh k5/t0.5p0.0n8000npt.log
+  205  sh ~fstarr/bin/extract-data.sh k10/t0.5p0.0n8000npt.log
+  206  sh ~fstarr/bin/extract-data.sh k20/t0.5p0.0n8000npt.log
+  207  sh ~fstarr/bin/extract-data.sh k50/t0.5p0.0n8000npt.log
+  208  sh ~fstarr/bin/extract-data.sh k1000/t0.5p0.0n8000npt.log
+  209  sh ~fstarr/bin/extract-data.sh k100/t0.5p0.0n8000npt.log
+  210  ls k100 -lrt
+  211  cd k1
+  212  ls
+  213  cd ..
+  214  ls -l 
+  215  for dir in k*;  sh ~fstarr/bin/extract-data.sh k100/t0.5p0.0n8000npt.log
+  216  for dir in k*;cd $dir &&  sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log && cd ..; done
+  217  for dir in k*;do cd $dir &&  sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log && cd ..; done
+  218  ls -l k100
+  219  cd polymer/k100
+  220  more t0.5p0.0n8000npt.inp
+  221  more t0.5p0.0n8000npt.lmp
+  222  ls
+  223  clear
+  224  # naive method to convert this to a 2d array
+  225  # todo: investigate more pythonic ways of doing this
+  226  x = []
+  227  for arrs in coords:;     items = []
+  228      for item in arrs: ;         items.append(item)
+  229      x.append(items)
+  230  x = np.array(x)
+  231  clear
+  232  $ cat file1
+  233  keyword1 IN BETWEEN
+  234  STUFF ON
+  235  ONE OR MORE
+  236  LINES keyword2
+  237  $ cat file2
+  238  NOW IS
+  239  THE WINTER OF
+  240  OUR DISCONTENT
+  241  $ cat tst.awk
+  242  BEGIN { RS="^$"; ORS="" }
+  243  NR==FNR { new = gensub(/\n$/,"",""); next }
+  244  match($0,/(.*keyword1 ).*( keyword2.*)/,a) { print a[1] new a[2] }
+  245  $ awk -f tst.awk file2 file1
+  246  keyword1 NOW IS
+  247  THE WINTER OF
+  248  ls
+  249  cat file1
+  250  keyword1 IN BETWEEN
+  251  STUFF ON
+  252  ONE OR MORE
+  253  cat file1
+  254  cd polymer
+  255  ls
+  256  cd polymer/k1
+  257  mv t0.5p0.0n8000npt.lmp ..
+  258  ls ..
+  259  cd ..
+  260  for dir in k*; do cp -i k1/t0.5p0.0n8000npt.inp $dir; done; # copies the input file into every directory k. 
+  261  y
+  262  for dir in k*; do ~fstarr/bin/extract-data.sh done; #submit as many jobs as there are k-directories. 
+  263  squeue
+  264  ls
+  265  ls k1 -lrt
+  266  for dir in k*; do cd $dir; ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log; cd ..; done;
+  267  ls k2 -lrt
+  268  ls
+  269  cd k100
+  270  ls
+  271  vi dump.xyz 
+  272  ls
+  273  ls *lmp
+  274  ls -l  t0.5p0.0n8000npt.lmp 
+  275  date
+  276  cd ..
+  277  ls -l */t0.5p0.0n8000npt.lmp 
+  278  ls -lrt
+  279  vi t0.5p0.0n8000npt.lmp
+  280  ls -lrt
+  281  for dir in k*; do cp -i k1/t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  282  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  283  y
+  284  more k100/t0.5p0.0n8000npt.lmp
+  285  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  286  squeue
+  287  more k1/dump.xyz 
+  288  vi k1/dump.xyz 
+  289  ls -l 
+  290  cd k1
+  291  ls -l 
+  292  -rw-r--r-- 1 mhanrahan othr    17332 Oct 17 15:32 t0.5p0.0n8000npt.log
+  293  vi *lmp
+  294  vi *log
+  295  vi t0.5p0.0n8000npt*inp
+  296  ls
+  297  more cpu.sub 
+  298     /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi < t0.5p0.0n8000npt.inp 
+  299  vi *log
+  300  vi t0.5p0.0n8000npt*inp
+  301     /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi < t0.5p0.0n8000npt.inp 
+  302  vi t0.5p0.0n8000npt*inp
+  303     /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi < t0.5p0.0n8000npt.inp 
+  304  vi *log
+  305  vi *lmp
+  306     /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi < t0.5p0.0n8000npt.inp 
+  307  ls ../*lmp
+  308  more ~fstarr/max/*lmp
+  309  vi *lmp
+  310  more ~fstarr/max/*lmp
+  311  Masses
+  312  1 1.000000
+  313  Atoms
+  314  1 1 1 1.808138 8.552811 -3.920247
+  315  fg
+  316     /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi < t0.5p0.0n8000npt.inp 
+  317  vi *lmp
+  318     /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi < t0.5p0.0n8000npt.inp 
+  319  ls
+  320  cd polymer
+  321  for dir in k*; do cp -i k1/t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  322  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  323  squeue
+  324  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  325  more k100/t0.5p0.0n8000npt.lmp
+  326  vim  k100/t0.5p0.0n8000npt.lmp
+  327  vim  k1/t0.5p0.0n8000npt.lmp
+  328  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  329  squeue
+  330  mv k1/t0.5p0.0n8000npt.lmp ..
+  331  ls ..
+  332  rm ../t0.5p0.0n8000npt.lmp 
+  333  mv k1/t0.5p0.0n8000npt.lmp .
+  334  cd k1 && mv t0.5p0.0n8000npt.lmp k1
+  335  cd ..
+  336  vim t0.5p0.0n8000npt.lmp
+  337  more t0.5p0.0n8000npt.lmp
+  338  clear
+  339   
+  340  for dir in k*; do cp -i k1/t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  341  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  342  for dir in k1; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  343  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  344  diff k1/t0.5p0.0n8000npt.inp k2/t0.5p0.0n8000npt.inp
+  345  diff k1/t0.5p0.0n8000npt.inp k50/t0.5p0.0n8000npt.inp
+  346  cd k1
+  347  ls
+  348  mv t0.5p0.0n8000npt.inp ..
+  349   
+  350  for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the input file into every directory k. 
+  351  cd ..
+  352  for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the input file into every directory k. 
+  353  ls k1 -lrt
+  354  vim t0.5p0.0n8000npt.inp
+  355  vim t0.5p0.0n8000npt.lmp
+  356  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  357  diff k1/t0.5p0.0n8000npt.inp k2/t0.5p0.0n8000npt.inp
+  358  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  359  squeue
+  360  vim t0.5p0.0n8000npt.inp
+  361  vim t0.5p0.0n8000npt.lmp
+  362  more t0.5p0.0n8000npt.lmp
+  363  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  364  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  365  cd ~fstarr/max
+  366  ls
+  367  more t0.5p0.0n8000npt.lmp
+  368  cd ~mhanrahan/polymer/
+  369  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  370  more k50/t0.5p0.0n8000npt.lmp
+  371  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  372  squeue
+  373  for dir in k*; do sed s/XXX/${dir}/ cpu.sub> $dir/cpu.sub; donemore
+  374  more k1/cpu.sub 
+  375  more t0.5p0.0n8000npt.lmp
+  376  vim cpu.sub 
+  377  for dir in k*; do cp -i cpu.sub $dir; done; # copies the input file into every directory k. 
+  378  vim t0.5p0.0n8000npt.inp
+  379  /t0.5p0.0n8000npt.inp
+  380  for dir in k*; do sed s/kkk/${dir}/t0.5p0.0n8000npt.inp > $dir/^Cdone # replace TTT in all files for every directory:; 
+  381  for dir in k*; do sed s/kkk/${dir}/t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp # replace TTT in all files for every directory: 
+  382  for dir in k*; do sed s/kkk/${dir}/t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp # replace TTT in all files for every directory k; done;
+  383  for dir in k*; do sed s/XXX/${dir}/ t0.5p0.0n8000npt.inp> $dir/t0.5p0.0n8000npt.inp; done # rename all XXX to k* for all k*
+  384  more k1/t0.5p0.0n8000npt.inp
+  385  for dir in k*; do sed s/kkk/${dir}/t0.5p0.0n8000npt.inp> $dir/t0.5p0.0n8000npt.inp; done # rename all XXX to k* for all k*
+  386  for dir in k*; do sed s/XXX/${dir}/ t0.5p0.0n8000npt.inp> $dir/t0.5p0.0n8000npt.inp; done # rename all XXX to k* for all k*
+  387  for dir in k*; do sed s/kkk/${dir}/ t0.5p0.0n8000npt.inp> $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k* for all k*
+  388  more k1/t0.5p0.0n8000npt.lmp
+  389  more k1/t0.5p0.0n8000npt.inp
+  390  for dir in k*; do cp -i cpu.sub $dir; done; # copies the input file into every directory k. 
+  391  more k50/cpu.sub
+  392  for dir in k*; do sed s/XXX/${dir}/ cpu.sub> $dir/cpu.sub; done # rename all XXX to k* for all k*
+  393  more k50/cpu.sub
+  394  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  395  squeue
+  396  ls -lrt k1
+  397  for dir in k*; do cd $dir && ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log  && cd ../; done;
+  398  cd k1 && xmgrace -nxy t0.5p0.0n8000npt.lmp
+  399  cd polymer/k1 && xmgrace -nxy t0.5p0.0n8000npt.lmp
+  400  cd polymer/k1 && xmgrace -nxy t0.5p0.0n8000npt.dat
+  401  xmgrace -nxy t0.5p0.0n8000npt.dat
+  402  more t0.5p0.0n8000npt.dat
+  403  xmgrace -nxy t0.5p0.0n8000npt.dat
+  404  cd ..
+  405  xmgrace -bxy 1:7 k*/ t0.5p0.0n8000npt.dat
+  406  xmgrace -bxy 1:7 k*/t0.5p0.0n8000npt.dat
+  407  diff k1/t0.5p0.0n8000npt.dat k100/t0.5p0.0n8000npt.dat
+  408  for dir in k*; do cp -i cpu.sub $dir; done; # copies the input file into every directory k. 
+  409  more k50/cpu.sub
+  410  more k50/t0.5p0.0n8000npt.inp
+  411  for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the input file into every directory k. 
+  412  more k50/t0.5p0.0n8000npt.inp
+  413  for dir in k*; do sed s/XXX/*/ cpu.sub> $dir/cpu.sub; done # rename all XXX to k* for all k*
+  414  more k50/t0.5p0.0n8000npt.inp
+  415  for dir in k?; do sed s/XXX/?/ cpu.sub> $dir/cpu.sub; done # rename all XXX to k* for all k*
+  416  more k50/t0.5p0.0n8000npt.inp
+  417  for dir in k*; do sed s/kkk/*/ t0.5p0.0n8000npt.inp > \$dir/t0.5p0.0n8000npt.inp; done # rename all XXX to k* for all k*
+  418  for dir in k*; do sed s/kkk/*/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all XXX to k* for all k*
+  419  more k50/t0.5p0.0n8000npt.inp
+  420  for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the input file into every directory k. 
+  421  for dir in k*; do sed s/kkk/*/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all XXX to k* for all k*
+  422  for dir in k*; do echo {*}; done
+  423  for dir in k*; do echo \*; done
+  424  for dir in k*; do echo dir; done
+  425  for dir in k*; do echo $dir; done
+  426  for dir in k*; do echo ${dir:1}; done
+  427  for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k-value for all k directories
+  428  more k50/t0.5p0.0n8000npt.inp
+  429  more k50/cpu.sub 
+  430  vim cpu.sub 
+  431  for dir in k*; do cp -i cpu.sub $dir; done; # copies the input file into every directory k. 
+  432  vim k20/cpu.sub 
+  433  vim k20/t0.5p0.0n8000npt.ino
+  434  vim k20/t0.5p0.0n8000npt.inp
+  435  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  436  squeue
+  437  scancel 100384*
+  438  scancel 1003841
+  439  scancel 1003842
+  440  scancel 1003843
+  441  scancel 1003844
+  442  scancel 1003845
+  443  scancel 1003846
+  444  scancel 1003847
+  445  for dir in k*; do sed s/XXX/{dir}/ cpu.sub> $dir/cpu.sub; done # rename all XXX to k* for all k*
+  446  more k10/cpu.sub
+  447  for dir in k*; do sed s/{dir}/${dir}/ cpu.sub> $dir/cpu.sub; done # rename all XXX to k* for all k*
+  448  more k10/cpu.sub
+  449  for dir in k*; do sed s/XXX/${dir}/cpu.sub> $dir/cpu.sub; done # rename all XXX to k* for all k*
+  450  for dir in k*; do sed s/XXX/${dir}/ cpu.sub> $dir/cpu.sub; done # rename all XXX to k* for all k*
+  451  more k10/cpu.sub
+  452  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  453  squeue
+  454  for dir in k*; do cd $dir && sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log  && cd ../; done; # extract data for each k-directory
+  455  squeue
+  456  xmblock 1:7 k?/t0.5p0.0n8000npt.dat; xmblock 1:7 k??/t0.5p0.0n8000npt.dat; xmblock 1:7 k???/t0.5p0.0n8000npt.dat;  # correctly alphabetizes each line
+  457  xmgrace &
+  458  xmblock 1:7 k?/t0.5p0.0n8000npt.dat; xmblock 1:7 k??/t0.5p0.0n8000npt.dat; xmblock 1:7 k???/t0.5p0.0n8000npt.dat;  # correctly alphabetizes each line
+  459  cd polymer/k1 && xmgrace -nxy t0.5p0.0n8000npt.lmp
+  460  xmgrace -bxy 1:7 k?/t0.5p0.0n8000npt.dat && xmgrace -bxy 1:7 k??/t0.5p0.0n8000npt.dat 
+  461  xmgrace -bxy 1:7 k?/t0.5p0.0n8000npt.dat && xmgrace -bxy 1:7 k??/t0.5p0.0n8000npt.dat  xmgrace -bxy 1:7 k???/t0.5p0.0n8000npt.dat
+  462  xmgrace -bxy 1:7 k?/t0.5p0.0n8000npt.dat && -bxy 1:7 k??/t0.5p0.0n8000npt.dat &&  -bxy 1:7 k???/t0.5p0.0n8000npt.dat
+  463  diff k1/t0.5p0.0n8000npt.dat k100/t0.5p0.0n8000npt.dat
+  464  diff k1/t0.5p0.0n8000npt.inp  k100/t0.5p0.0n8000npt.inp
+  465  more k1/cpu.sub
+  466  diff k1/t0.5p0.0n8000npt.inp  k100/t0.5p0.0n8000npt.inp
+  467  diff k1/dump1.xyz k100/dump100.xyz
+  468  more cpu.sub
+  469  more t0.5p0.0n8000npt.inp
+  470  vim t0.5p0.0n8000npt.inp
+  471  for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the input file into every directory k. 
+  472  more k50/t0.5p0.0n8000npt.inp
+  473  for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k-value for all k directories
+  474  more k50/t0.5p0.0n8000npt.inp
+  475  more k50/cpu.sub 
+  476  more k100/cpu.sub 
+  477  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  478  squeue
+  479  more k50/cpu.sub
+  480  more k1/cpu.sub
+  481  squeue
+  482  diff k1/dump1.xyz k100/dump100.xyz
+  483  for dir in k*; do cd $dir && sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log  && cd ../; done; # extract data for each k-directory
+  484  #xmgrace -block k?/t -bxy 1:3 -block file2 -bxy 1:3 -block file3 -bxy 1:3
+  485  cd k1
+  486  ls
+  487  #xmgrace -block k?/t0.5p0.0n8000npt.dat -bxy 1:3 -block file2 -bxy 1:3 -block file3 -bxy 1:3
+  488  #xmgrace -block k?/t0.5p0.0n8000npt.dat -bxy 1:7 -block k??/t0.5p0.0n8000npt.dat -bxy 1:7 -block k???/t0.5p0.0n8000npt.dat -bxy 1:7
+  489  xmgrace -block k?/t0.5p0.0n8000npt.dat -bxy 1:7 -block k??/t0.5p0.0n8000npt.dat -bxy 1:7 -block k???/t0.5p0.0n8000npt.dat -bxy 1:7
+  490  xmgrace k?/t0.5p0.0n8000npt.dat -bxy 1:7 k??/t0.5p0.0n8000npt.dat -bxy 1:7  k???/t0.5p0.0n8000npt.dat -bxy 1:7
+  491  cd ..
+  492  xmgrace -bxy 1:7 k?/t0.5p0.0n8000npt.dat -bxy 1:7 k??/t0.5p0.0n8000npt.dat -bxy 1:7  k???/t0.5p0.0n8000npt.dat
+  493  ls
+  494  xmgrace eangles_v_time.dat 
+  495  more k1/t0.5p0.0n8000npt.dat
+  496  xmgrace -bxy 1:7 k?/t0.5p0.0n8000npt.dat
+  497  xmgrace -bxy 1:7 k1/t0.5p0.0n8000npt.dat
+  498  xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7
+  499  xmgrace -block k?/t0.5p0.0n8000npt.dat -bxy 1:7
+  500  more k2/t0.5p0.0n8000npt.dat
+  501  xmgrace -block k?/t0.5p0.0n8000npt.dat -bxy 1:7
+  502  xmgrace -block -bxy 1:7 k?/t0.5p0.0n8000npt.dat 
+  503  xmgrace -block 1:7 k?/t0.5p0.0n8000npt.dat 
+  504  xmgrace -block file1 -bxy 1:3 -block file2 -bxy 1:3 -block file3 -bxy 1:7
+  505  xmgrace -block k1/t0.5p0.0n8000npt.dat  -bxy 1:7^Cblock k2/t0.5p0.0n8000npt.dat  -bxy 1:7
+  506  xmgrace -block k1/t0.5p0.0n8000npt.dat  -bxy 1:7^Cblock k2/t0.5p0.0n8000npat  -bxy 1:7  -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat -bxy 1:7
+  507  xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat-bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7# heinous way to plot these in order, todo, ask for a faster one?
+  508  ls
+  509  rm eangles_v_time.dat 
+  510  morexmgrace eangle_v_time.dat 
+  511  xmgrace eangle_v_time.dat 
+  512  more k50/t0.5p0.0n8000npt.dat
+  513  more k100/t0.5p0.0n8000npt.dat
+  514  xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat-bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7# heinous way to plot these in order, todo, ask for a faster one?
+  515  xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat-bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7
+  516  xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat -bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7
+  517  py
+  518  py3
+  519  python3 -m venv /share/apps/CENTOS7/python/3.8.3
+  520  source activate /share/apps/CENTOS7/python/3.8.3
+  521  ls /share/apps/CENTOS7
+  522  ls /share/apps/CENTOS7/python
+  523  ls /share/apps/CENTOS7/python3.8.3
+  524  ls /share/apps/CENTOS7/python/3.8.3
+  525  ls /share/apps/CENTOS7/python/3.8.3/bin
+  526  ls /share/apps/CENTOS7/python/3.8.3/bin/python
+  527  source activate /share/apps/CENTOS7/python/3.8.3/bin/python
+  528  python3
+  529  cd mhanrahan
+  530  ls
+  531  ls exercises/
+  532  ls max
+  533  vim README.txt
+  534  ls
+  535  mv README.txt max
+  536  ls max
+  537  python3 -m venv environments
+  538  ls
+  539  ls environments/
+  540  source environments/bin/activate
+  541  oh
+  542  python3
+  543  jupyter notebook
+  544  cd lib
+  545  ls
+  546  ls environments/
+  547  ls environments/lib
+  548  ls environments/lib/python3.9
+  549  ls environments/lib/python3.9/site-packages/
+  550  pip install jupyter
+  551  jupyter
+  552  jupter notebook
+  553  jupyter notebook
+  554  ls
+  555  more polymer/k1/cpu.sub 
+  556  git
+  557  cd ..
+  558  cd mhanrahan/polymer/
+  559  git init
+  560  ls
+  561  git commit
+  562    git config --global user.email "you@example.com"
+  563    git config --global user.name "Your Name"
+  564   git config --global user.email "mhanrahan@wesleyan.edu"
+  565  git config --global user.name "Max Hanrahan"
+  566  git commit
+  567  git add *
+  568  git add --all
+  569  git commit "Test commit"
+  570  git commit -m "test commit"
+  571  git push
+  572  git remote add origin https://github.com/max-hanrahan/polymers.git
+  573  git branch -M main
+  574  git push -u origin main
+  575  git push
+  576   git push --set-upstream origin main
+  577  git config --global credential.helper store
+  578  git pull
+  579  clear
+  580  git
+  581  git remote add origin git@github.com:max-hanrahan/polymers.git
+  582  git branch -M main
+  583  git remote -v
+  584  git remote remove origin
+  585  git remote add origin git@github.com:max-hanrahan/polymers.git
+  586  git add -all
+  587  git add --all
+  588  git commit -m "my test commit"
+  589  git push
+  590   git push --set-upstream origin main
+  591  cd ..
+  592  mkdir python_test
+  593  mv polymer/k1/cpu.sub python_test/
+  594  ls polymer
+  595  mv polymer/swap_coords.py python_test/
+  596  ls python_test/
+  597  ls environments/
+  598  ls environments/bin
+  599  deactivate
+  600  source environments/bin/activate
+  601  deactivaet
+  602  cd python_test/
+  603  source environments/bin/activate
+  604  source ~mhanrahan/environments/bin/activate
+  605  deactivate
+  606  sbatch cpu.sub
+  607  squeue
+  608  more err
+  609  source ~mhanrahan/environments/bin/activate
+  610  sbatch cpu.sub
+  611  more err
+  612  pip install numpy
+  613  sbatch cpu.sub
+  614  more err
+  615  python3 swap_coords.py 
+  616  ls -lrt
+  617  rm swapped_polys.xyz 
+  618  ls
+  619  cd python_test/
+  620  sbatch cpu.sub
+  621  squeue
+  622  ls
+  623  source ~mhanrahan/environments/bin/activate
+  624  sbatch cpu.sub
+  625  squeue
+  626  sbatch cpu.sub
+  627  squeue
+  628  python3 swap_coords.py 
+  629  ls
+  630  deactivate
+  631  clear
+  632  source ~mhanrahan/environments/bin/activate
+  633  python3 swap_coords.py
+  634  deactivate
+  635  sbatch cpu.sub
+  636  squeue
+  637  more err
+  638  rm err
+  639  rm swapped_polys.xyz 
+  640  sbatch cpu.sub
+  641  squeue
+  642  ls
+  643  more err
+  644  more out
+  645  vim swap_coords.py 
+  646  sbatch cpu.sub
+  647  ls
+  648  more err
+  649  ls
+  650  sbatch cpu.sub 
+  651  clear
+  652  sbatch cpu.sub more err
+  653  more err
+  654  source ~mhanrahan/environments/activate
+  655  source ~mhanrahan/environments/bin/activate
+  656  pip
+  657  vim swap_coords.py 
+  658  sbatch cpu.sub more err
+  659  sbatch cpu.sub
+  660  more err
+  661  git init pythontest
+  662  git remote add origin https://github.com/[max-hanrahan]/[polymers.git]
+  663  git push -u origin master
+  664  git log
+  665  git
+  666  git clone https://github.com/max-hanrahan/cs102.git
+  667  git remote add origin https://github.com/[max-hanrahan]/[polymers.git]
+  668  git clone https://github.com/max-hanrahan/cs102.git
+  669  ls
+  670  ls cs102/
+  671  ls cs102/project07-dynamicvoting-Quiet-Warlock/
+  672  emacs cs102/project07-dynamicvoting-Quiet-Warlock/other_voting.cpp 
+  673  ls
+  674  git add cs102
+  675  \rm -r cs102
+  676  y
+  677  cd python_test/
+  678  source ~mhanrahan/environments/bin/activate
+  679  where python3
+  680  which python3
+  681  sbatch cpu.sub 
+  682  more out
+  683  cd ..
+  684  git init testing_git
+  685  git add . && git commit -m "initial commit"
+  686  cd testing_git/
+  687  git add . && git commit -m "initial commit"
+  688  gh repo create
+  689  pip install gh
+  690  gh repo create
+  691  bash: gh: command not found...
+  692  git init polymers
+  693  cd ..
+  694  ls
+  695  cd polymer
+  696  git init polymer
+  697  git add . && git commit -m "initial commit"
+  698  git add all
+  699  git add --all
+  700  find / -name ".git"
+  701  ls
+  702  cd polymer/
+  703  ls
+  704  for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the input file into every directory k. 
+  705  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  706  more more
+  707  more k50/t0.5p0.0n8000npt.inp
+  708  for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k-value for all k directories
+  709  more k50/t0.5p0.0n8000npt.inp
+  710  more k50/t0.5p0.0n8000npt.lmp
+  711  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  712  cd ..
+  713  for dir in k*; do cd $dir &&  sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  714  squeue
+  715  cd ..
+  716  for dir in k*; do cd $dir; sbatch cpu.sub; cd ../; done; #submit as many jobs as there are k-directories. 
+  717  squeue
+  718  more k1/err
+  719  more k1/t0.5p0.0n8000npt.inp
+  720  more k1/t0.5p0.0n8000npt.lmp
+  721  more k1/t0.5p0.0n8000npt.log
+  722  ls -lrt k1
+  723  more k1/out
+  724  ls
+  725  cd polymer
+  726  more k1/out
+  727  more k1/cpu.sub
+  728  ls k1
+  729  more cpu.sub
+  730  for dir in k*; do cp -i cpu.sub $dir; done; # copies the input file into every directory k. 
+  731  more k1/sub
+  732  more k1/cpu.sub 
+  733  for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k-value for all k directories
+  734  for dir in k*; do sed s/XXX/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k-value for all k directories
+  735  more k1/cpu.sub 
+  736  for dir in k*; do sed s/XXX/${dir:1}/ cpu.sub > $dir/cpu.sub; done # rename all kkk to k-value for all k directories
+  737  more k1/cpu.sub 
+  738  more k001/cpu.sub 
+  739  more k100/cpu.sub 
+  740  more k1/t0.5p0.0n8000npt.inp
+  741  for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k-value for all k directories
+  742  more k1/t0.5p0.0n8000npt.inp
+  743  more k100/t0.5p0.0n8000npt.inp
+  744  more k1/t0.5p0.0n8000npt.lmp
+  745  more k100/t0.5p0.0n8000npt.lmp
+  746  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  747  squeue
+  748  more k1/err
+  749  more k1/out
+  750  vim t0.5p0.0n8000npt.lmp
+  751  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  752  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  753  more k1/out
+  754  more k1/t0.5p0.0n8000npt.log
+  755  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  756  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  757  squeue
+  758  cd polymer/ && more k1/
+  759  cd polymer/ && more k1/t0.5p0.0n8000npt.log
+  760  ls
+  761  cd ..
+  762  ls
+  763  ls polymer
+  764  ls polymer/polymer/
+  765  rm  polymer/polymer/
+  766  rm -r  polymer/polymer/
+  767  y
+  768  ls
+  769  cd polymer/
+  770  ls
+  771  more k1/t0.5p0.0n8000npt.inp
+  772  more k100/t0.5p0.0n8000npt.inp
+  773  cd k1
+  774  sbatch cpu.sub
+  775  squeue
+  776  more err
+  777  more out
+  778  more t0.5p0.0n8000npt.lmp
+  779  ls
+  780  vimdiff k1/t0.5p0.0n8000npt.lmp ~fstarr/max/t0.5p0.0n8000npt.lmp
+  781  vim k1/t0.5p0.0n8000npt.lmp
+  782  sbatch cpu.sub
+  783  squeue
+  784  cd k1
+  785  sbatch cpu.sub
+  786  squeue
+  787  scancel 1003948
+  788  mv t0.5p0.0n8000npt.lmp ..
+  789  cd ..
+  790  ls
+  791  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  792  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories.
+  793  squeue
+  794  for dir in k*; do cd $dir && sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log  && cd ../; done; # extract data for each k-directory
+  795  xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat -bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7 # heinous command to load in all the data
+  796  cd k1
+  797  cd polymer/
+  798  xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat -bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7 # heinous command to load in all the data
+  799  scp -r cottontail: polymers/k1/dump1.xyz .
+  800  scp -r cottontail:polymers/k1/dump1.xyz .
+  801  more k1
+  802  ls k1
+  803  ls k1 -lrt
+  804  scp -r cottontail:polymers/k1/dump1.xyz .
+  805  scp -r cottontail:polymer/k1/dump1.xyz .
+  806  for dir in k*; do scp -r cottontail:polymer/${dir}/dump${dir:1}.xyz .; ;done
+  807  for dir in k*; do scp -r cottontail:polymer/${dir}/dump${dir:1}.xyz .; done
+  808  for dir in k*; do scp -r cottontail:polymer/${dir}/dump${dir:1}.xyz /Desktop; done
+  809  pwd
+  810  sch
+  811  scp
+  812  ls
+  813  cd polymer/
+  814  ls
+  815  vim t0.5p0.0n8000npt.lmp
+  816  vim k1/t0.5p0.0n8000npt.lmp
+  817  mv k1/t0.5p0.0n8000npt.lmp ..
+  818  cleawr
+  819  clear
+  820  for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the input file into every directory k. 
+  821  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  822  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  823  squeue
+  824  more k1/more k1/t0.5p0.0n8000npt.log
+  825  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  826  y
+  827  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  828  squeue
+  829  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  830  more k2/t0.5p0.0n8000npt.lmp
+  831  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  832  squeue
+  833  more k1/t0.5p0.0n8000npt.inp
+  834  more k1/t0.5p0.0n8000npt.log
+  835  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the input file into every directory k. 
+  836  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  837  squeue
+  838  cd k1
+  839  more t0.5p0.0n8000npt.log
+  840  sbatch cpu.sub
+  841  squeue
+  842  mv t0.5p0.0n8000npt.log ..
+  843  cd ..
+  844  ls
+  845  more t0.5p0.0n8000npt.lmp
+  846  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the data file into every directory k. 
+  847  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  848  for dir in k*; do cp -i $dir/dump${dir:1} .; done; # copies each dump file back to the current directory
+  849  for dir in k*; do cp -i $dir/dump${dir:1}.xyz .; done; # copies each dump file back to the current directory
+  850  cd polymer/
+  851  ls
+  852  vimdiff k50/t0.5p0.0n8000npt.inp k1/t0.5p0.0n8000npt.inp
+  853  vimdiff k50/t0.5p0.0n8000npt.log k1/t0.5p0.0n8000npt.log
+  854  vimdiff k5/t0.5p0.0n8000npt.log k1/t0.5p0.0n8000npt.log
+  855  vimdiff k50/t0.5p0.0n8000npt.log k1/t0.5p0.0n8000npt.log
+  856  more k50
+  857  ls k50
+  858  more k50.out
+  859  more k50/out
+  860  vimdiff  k50/out k1/out
+  861  vimdiff  k5/out k1/out
+  862  ls
+  863  clear
+  864  ls
+  865  clear
+  866  vimdiff  k50/out k1/out
+  867  cd polymer/
+  868  vimdiff k50/t0.5p0.0n8000npt.log k1/t0.5p0.0n8000npt.log
+  869  cd polymers
+  870  ls
+  871  cd polymer
+  872  ls
+  873  clear
+  874  git clone https://github.com/max-hanrahan/polymers.git
+  875  ls
+  876  ls -lrt
+  877  cd polymers/
+  878  cd ..; for dir in k*; do cp -r $dir polymers; done; # copies each dump file back to the current directory
+  879  ls polymers/
+  880  ls polymers/k50
+  881  cd polymers/
+  882  git add .
+  883  git commit -m "initial commit"
+  884  git push
+  885  clear
+  886  ls
+  887  cd ..
+  888  ls
+  889  cd ..
+  890  ls
+  891  cd polymer/
+  892  ls
+  893  cd polymer/
+  894  ls
+  895  git add .
+  896  git commit -m "copying everything over"
+  897  git push
+  898  ls
+  899  cd ..
+  900  ls
+  901  mkdir emergency_p_backup
+  902  ls
+  903  ls polymer/
+  904  ls polymer/polymer/
+  905  \rm -r polymer/
+  906  y
+  907  ls
+  908  ls emergency_p_backup/
+  909  ls
+  910  clear
+  911  ls
+  912  git clone https://github.com/max-hanrahan/polymers.git
+  913  ls
+  914  ls polymers/
+  915  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  916  for dir in k*; do cd ${dir} && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  917  ls
+  918  cd polymers/
+  919  for dir in k*; do cd ${dir} && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  920  squeue
+  921  ls
+  922  cd python_test/
+  923  ls
+  924  cd pythontest/
+  925  cd ..
+  926  rm pythontest/
+  927  rm -r pythontest/
+  928  ls
+  929  vim cpu.sub 
+  930  sbatch cpu.sub 
+  931  squeue
+  932  ls
+  933  ls testing_git/
+  934  ls testing_git/polymers/
+  935  rm testing_git/
+  936  \rm -r testing_git/
+  937  y
+  938  cd polymers/
+  939  ls
+  940  vimdiff k5/cpu.sub k50/cpu.sub
+  941  for dir in k*; do cd ${dir} && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  942  squeue
+  943  clear
+  944  ls
+  945  cd polymers
+  946  vi t0.5p0.0n8000npt.inp 
+  947  ls ~fstarr/wilson/strain/fixed-mech/r.00001/
+  948  ls ~fstarr/wilson/strain/mech/
+  949  ls ~fstarr/wilson/strain/mech/r.00001/
+  950  du -sh ~fstarr/wilson/
+  951  du -sh ~fstarr/wilson/*
+  952  du -sh ~fstarr/wilson/mid-stop/
+  953  du -sh ~fstarr/wilson/mid-stop/*
+  954  ls ~fstarr/wilson/mid-stop/t1.0/t1.0p10.0n10200*inp
+  955  more /zfshomes/fstarr/wilson/mid-stop/t1.0/t1.0p10.0n10200.inp
+  956  vi t0.5p0.0n8000npt.inp 
+  957  vi *lmp
+  958  exit
+  959  ls
+  960  ls emergency_p_backup/
+  961  cd polymers/
+  962  git add .
+  963  git commit -m "updated randomization python code"
+  964  git push
+  965  clear
+  966  cd k1
+  967  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the data file into every directory k. 
+  968  cd ..
+  969  for dir in k*; do cp -i t0.5p0.0n8000npt.lmp $dir; done; # copies the data file into every directory k. 
+  970  y
+  971  more k1/cpu.sub 
+  972  more k1/t0.5p0.0n8000npt.inp
+  973  cd k
+  974  cd k1
+  975  sbatch cpu.sub
+  976  squeue
+  977  scancel 1004408
+  978  cd ..
+  979  ls
+  980  git add .
+  981  git commit -m "updated data files"
+  982  git push
+  983  clear
+  984  for dir in k*; do cd $dir && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories. 
+  985  more t0.5p0.0n8000npt.inp
+  986  clear
+  987  squeue
+  988  for dir in k*; do cp -i $dir/dump${dir:1}.xyz .; done; # copies each dump file back to the current directory
+  989  for dir in k*; do cd $dir && sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log  && cd ../; done; # extract data for each k-directory
+  990  git add .
+  991  git commit -m "reran simulations and extracted data"
+  992  git push
+  993  cd polymers/
+  994  ls
+  995  more k1/t0.5p0.0n8000npt.inp
+  996  cd ..
+  997  ls
+  998  rm -r emergency_p_backup/
+  999  \rm -r emergency_p_backup/
+ 1000  ls
+ 1001  ls python_test/
+ 1002  \rm -r python_test/
+ 1003  ls
+ 1004  more t0.5p0.0n8000npt.lmp 
+ 1005  clear
+ 1006  ls
+ 1007  cd polymers/
+ 1008  ls
+ 1009  more t0.5p0.0n8000npt.inp
+ 1010  diff k1/t0.5p0.0n8000npt.inp k2/t0.5p0.0n8000npt.inp
+ 1011  more k1/t0.5p0.0n8000npt
+ 1012  more k1/t0.5p0.0n8000npt.inp
+ 1013  vim t0.5p0.0n8000npt.inp
+ 1014  history > history_for_print.txt
