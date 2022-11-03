@@ -7,9 +7,6 @@ variable p world 0.0
 variable n world 8000
 variable f world 5 # world ensures leading zeros get passed
 
-log k${k}t${T}p${p}f${f}n${n}npt.log #todo: learn string parsing in lammps
-log k10t${T}p${p}f${f}n${n}npt.log 
-log k10t1.2p${p}f${f}n${n}npt.log 
-log k10t1.2p0.0f${f}n${n}npt.log 
-log k10t1.2p0.0f5n${n}npt.log 
-log k10t1.2p0.0f5n8000npt.log 
+variable filename string k{10}t{1.2}p{0.0}f{5}n{8000}npt
+
+log filename.log

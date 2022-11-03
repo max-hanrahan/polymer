@@ -41,7 +41,7 @@ thermo 1000
 
 dump 1 all xyz	100000	dump${filename}.xyz
 
-restart 1000 k${k}t${T}p${p}f${f}n${n}npt-1.res k${k}t${T}p${p}f${f}n${n}npt-2.res
+restart 100000 k${filename}-1.res k${filename}-1.res
 
 #run_style respa 2 3 bond 1 pair 2
 #timestep 0.006
