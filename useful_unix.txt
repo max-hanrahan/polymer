@@ -1,10 +1,28 @@
-for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the data file into every directory k. 
+for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the data file into every directory k.
 for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k-value for all k directories
 for dir in k*; do cd ${dir} && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories.
 for dir in k*; do cd $dir && sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log  && cd ../; done; # extract data for each k-directory
 for dir in k*; do cp -i $dir/dump${dir:1}.xyz .; done; # copies each dump file back to the current directory
 
 
+for kdir in k*; do mv $kdir/t0.5p0.0n8000npt* $kdir/t1.2; done; # move all t0.5 files to each appropriate t1.2 directory
+for kdir in k*; do rename $kdir/t1.2/t0.5p $kdir/t1.2/t1.2p *; done; # rename all t0.5 to t1.2
+
+do rename t1.2 t0.9 *; # rename t1.2 -> t0.9
+
+for dir in k*; do for i in $(seq 0.5 0.1 1.2); do mkdir ${dir}/t$i; done; done; # creates the temperature directories in each k-directory.
+
 xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat -bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7 # heinous command to load in all the data
 
 history > history_for_print.txt # creates a text file of full command-line history
+grep -rnw '/path/to/somewhere/' -e 'pattern' # greps for the 'pattern'!
+cp -r t1.0/. t0.9/ # copy files without the parent folder
+
+cp -r kkk/ttt/. k5/t1.0/ # copy abstract directory contents into specific dir
+cd k5/t1.0/
+sed -i 's/kkk/5/g' *; rename kkk 5 * # change all kkk -> specific k
+sed -i 's/TTT/1.0/g' *; rename TTT 1.0 * # change all ttt -> specific t
+sbatch cpu.sub && cd ../../
+
+
+ls -I "*.res # list all files in directory not of extension ".res"
