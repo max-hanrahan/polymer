@@ -1,95 +1,23 @@
-	linux-vdso.so.1 (0x00007ffcacb26000)
-	libjpeg.so.62 => /lib64/libjpeg.so.62 (0x00007fa4f6f1c000)
-	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007fa4f6cfc000)
-	libdl.so.2 => /lib64/libdl.so.2 (0x00007fa4f6af8000)
-	libutil.so.1 => /lib64/libutil.so.1 (0x00007fa4f68f4000)
-	libmpi_cxx.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi_cxx.so.1 (0x00007fa4f66da000)
-	libmpi.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi.so.1 (0x00007fa4f63fe000)
-	libstdc++.so.6 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libstdc++.so.6 (0x00007fa4f601e000)
-	libm.so.6 => /lib64/libm.so.6 (0x00007fa4f5c9c000)
-	libgcc_s.so.1 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libgcc_s.so.1 (0x00007fa4f5a84000)
-	libc.so.6 => /lib64/libc.so.6 (0x00007fa4f56bf000)
-	/lib64/ld-linux-x86-64.so.2 (0x00007fa4f7185000)
-	libopen-rte.so.7 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-rte.so.7 (0x00007fa4f5444000)
-	libopen-pal.so.6 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-pal.so.6 (0x00007fa4f5161000)
-	librt.so.1 => /lib64/librt.so.1 (0x00007fa4f4f59000)
-LAMMPS (19 Mar 2020)
-Reading data file ...
-  orthogonal box = (-10 -10 -10) to (10 10 10)
-  2 by 2 by 2 MPI processor grid
-  reading atoms ...
-  8000 atoms
-  reading velocities ...
-  8000 velocities
-  scanning bonds ...
-  1 = max bonds/atom
-  scanning angles ...
-  1 = max angles/atom
-  reading bonds ...
-  7200 bonds
-  reading angles ...
-  320 angles
-Finding 1-2 1-3 1-4 neighbors ...
-  special bond factors lj:   0          0          0         
-  special bond factors coul: 0          0          0         
-  2 = max # of 1-2 neighbors
-  2 = max # of 1-3 neighbors
-  4 = max # of 1-4 neighbors
-  6 = max # of special neighbors
-  special bonds CPU = 0.870064 secs
-  read_data CPU = 1.91598 secs
-Finding 1-2 1-3 1-4 neighbors ...
-  special bond factors lj:   0          1          1         
-  special bond factors coul: 0          1          1         
-  2 = max # of 1-2 neighbors
-  6 = max # of special neighbors
-  special bonds CPU = 0.405165 secs
-Neighbor list info ...
-  update every 1 steps, delay 10 steps, check yes
-  max neighbors/atom: 2000, page size: 100000
-  master list distance cutoff = 2.8
-  ghost atom cutoff = 2.8
-  binsize = 1.4, bins = 15 15 15
-  1 neighbor lists, perpetual/occasional/extra = 1 0 0
-  (1) pair lj/cut, perpetual
-      attributes: half, newton on
-      pair build: half/bin/newton
-      stencil: half/bin/3d/newton
-      bin: standard
-Setting up Verlet run ...
-  Unit style    : lj
-  Current step  : 0
-  Time step     : 0.002
-WARNING: Inconsistent image flags (../domain.cpp:785)
-Per MPI rank memory allocation (min/avg/max) = 6.496 | 6.516 | 6.649 Mbytes
-Step KinEng PotEng TotEng E_pair E_bond E_angle Press Temp Lx Volume 
-       0   0.48448444    14.197408    14.681893   -5.6481987    18.329377    1.5162301   -1.5880033   0.32303001           20         8000 
-    1000    1.1403338     13.80815    14.948484    -4.969832    18.507021   0.27096076   0.26118058   0.76031755    20.420441    8515.2098 
-    2000    1.3341906    14.067941    15.402132   -4.7053551    18.586343   0.18695319   0.26681872   0.88957162     20.64015    8793.0295 
-    3000     1.549868    14.339928    15.889796   -4.4483784    18.641666    0.1466403   0.31062385    1.0333745    20.879743    9102.8093 
-    4000     1.738889    14.594904    16.333793   -4.2269205    18.700233   0.12159134   0.22960736    1.1594043    21.128041    9431.4338 
-    5000    1.8526521    14.764491    16.617143    -4.044257    18.711819  0.096928785   0.10445507    1.2352558     21.34018    9718.3877 
-    6000    1.8319673    14.834679    16.666646   -3.9709938    18.726829  0.078843379  -0.16207538    1.2214642    21.460679    9883.9466 
-    7000    1.7915009    14.809808    16.601309   -3.9793258     18.71519  0.073943979   0.16683438    1.1944832    21.430679    9842.5544 
-    8000    1.8146484    14.750643    16.565291   -4.0304796    18.717089   0.06403367 -0.073099292    1.2099168    21.388871    9785.0624 
-    9000    1.8057449    14.790483    16.596228   -4.0020706    18.733225  0.059328467  0.058594683    1.2039805    21.418181    9825.3432 
-   10000    1.7908666     14.81623    16.607097   -3.9663821    18.729149  0.053463021  0.056797102    1.1940603    21.449318    9868.2575 
-   11000    1.8129312    14.778666    16.591597   -3.9986688    18.723306  0.054028548 0.0027411849    1.2087719    21.426479    9836.7677 
-   12000    1.7907391    14.778312    16.569051   -4.0086078    18.736554  0.050365515 -0.019372137    1.1939753    21.405715    9808.1975 
-   13000    1.7934066    14.762735    16.556141    -4.029902     18.73751  0.055126671  0.026286322    1.1957539    21.379551     9772.277 
-   14000     1.787571    14.766172    16.553743   -4.0037961    18.723789  0.046179012 -0.086161361     1.191863    21.385247     9780.089 
-   15000    1.7927786     14.78435    16.577129   -3.9804622    18.712665  0.052147807   0.08244704    1.1953351    21.442181    9858.4095 
-   16000    1.8227189    14.808849    16.631568   -3.9710345    18.734388  0.045495508   0.12632653    1.2152978    21.425263    9835.0934 
-   17000    1.7588019    14.791107    16.549909   -3.9860555    18.724996  0.052166246  0.076635376    1.1726812     21.43735    9851.7477 
-   18000    1.7840212    14.795485    16.579506   -3.9948641    18.743615   0.04673409 -0.074157365    1.1894962    21.412855    9818.0165 
-   19000    1.8128859    14.798982    16.611868   -3.9958864    18.742366  0.052503043  -0.15071218    1.2087417    21.432095    9844.5047 
-   20000    1.7805687    14.788866    16.569434   -4.0121408    18.750543  0.050463105   0.13774788    1.1871942    21.402707     9804.064 
-   21000    1.7976617    14.771045    16.568706   -4.0157411    18.734106  0.052680303 -0.048834118     1.198591    21.415882    9822.1798 
-   22000    1.8310187    14.784308    16.615326   -3.9745535    18.706778  0.052082932  0.044542616    1.2208317    21.452007    9871.9694 
-   23000    1.8152825     14.80851    16.623793   -3.9529583    18.713889  0.047579525  -0.11126511    1.2103397    21.488017    9921.7668 
-   24000    1.8020276    14.781057    16.583085   -4.0002672    18.729118  0.052206471 0.0052091117    1.2015019    21.418037    9825.1459 
-   25000    1.7949582    14.760661    16.555619   -4.0243024    18.735101  0.049862923   -0.2035088    1.1967884    21.408841    9812.4952 
-   26000    1.8047769    14.771013     16.57579   -4.0064013    18.727019     0.050395    0.1006442     1.203335    21.416436    9822.9418 
-   27000    1.8047677    14.807582     16.61235   -3.9895205    18.748165  0.048938273 -0.0014287834    1.2033289    21.427406    9838.0449 
-   28000    1.8106767    14.771405    16.582082   -4.0077048    18.727065  0.052044821  -0.21908129    1.2072687    21.421681    9830.1607 
-   29000    1.7799768    14.750245    16.530222   -4.0238788    18.733407  0.040716363 -0.0070331015    1.1867996    21.382112     9775.788 
+	linux-vdso.so.1 (0x00007ffda8f94000)
+	libjpeg.so.62 => /lib64/libjpeg.so.62 (0x00007f1c8b68d000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f1c8b46d000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007f1c8b269000)
+	libutil.so.1 => /lib64/libutil.so.1 (0x00007f1c8b065000)
+	libmpi_cxx.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi_cxx.so.1 (0x00007f1c8ae4b000)
+	libmpi.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi.so.1 (0x00007f1c8ab6f000)
+	libstdc++.so.6 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libstdc++.so.6 (0x00007f1c8a78f000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f1c8a40d000)
+	libgcc_s.so.1 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libgcc_s.so.1 (0x00007f1c8a1f5000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f1c89e30000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f1c8b8f6000)
+	libopen-rte.so.7 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-rte.so.7 (0x00007f1c89bb5000)
+	libopen-pal.so.6 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-pal.so.6 (0x00007f1c898d2000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007f1c896ca000)
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 8 slots 
+that were requested by the application:
+  /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------

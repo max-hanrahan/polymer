@@ -4,17 +4,17 @@
 # Always put your SBATCH parameters at the top of your batch script.
 #
 # GENERAL
-#SBATCH --job-name="k=5t=1.2p=0.0n=8000f=5"
+#SBATCH --job-name="k=5,t=1.2,p=0.0,n=8000,f=5"
 #SBATCH --output=out   # or both in default file
 #SBATCH --error=err    # slurm-$SLURM_JOBID.out
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=mhanrahan@wesleyan.edu
 #
 # NODE control
-#SBATCH -N 8     # Tom's suggestion for LAMMPS (default is 1)
+#SBATCH -N 1 
 #
 # CPU control
-##SBATCH -n 1     # tasks=S*C*T
+##SBATCH -n 8     # tasks=S*C*T (default is 1)
 ##SBATCH --ntasks-per-node=1
 ##SBATCH --cpus-per-task=1
 ##SBATCH -B 1:1:1 # S:C:T=sockets/node:cores/socket:threads/core
