@@ -1,6 +1,0 @@
-LAMMPS (19 Mar 2020)
-# LAMMPS input file
-
-variable k equal 2
-
-log t0.5p0.0n8000npt.log
