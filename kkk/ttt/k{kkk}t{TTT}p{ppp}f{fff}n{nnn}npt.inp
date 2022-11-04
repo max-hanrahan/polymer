@@ -6,9 +6,9 @@ variable p world ppp
 variable n world nnn
 variable f world fff # world ensures leading zeros get passed
 
-variable filename string k{kkk}t{TTT}p{ppp}f{fff}n{nnn}npt
+variable filename string k${k}t${T}p${p}f${f}n${n}npt
 
-log filename.log
+log ${filename}.log
 units 		lj
 dimension 	3
 
@@ -16,9 +16,8 @@ dimension 	3
 # if there are angular potentials, use next line
 atom_style	angle
 angle_style	cosine
-read_data ${filename}.lmp # use this if first time running
-
-# read_restart ${filename}-1.res #todo: use both instead of 1? talk to Starr
+#read_data ${filename}.lmp # use this if first time running
+read_restart ${filename}-1.res 
 
 pair_style	lj/cut	2.5
 #when using global * * the cutoff should be the smallest of all possible pairs
@@ -41,11 +40,11 @@ thermo 1000
 
 dump 1 all xyz	100000	dump${filename}.xyz
 
-restart 100000 ${filename}-1.res ${filename}-2.res
+restart 1000 ${filename}-1.res ${filename}-2.res
 
 #run_style respa 2 3 bond 1 pair 2
 #timestep 0.006
 
 timestep 0.002
 
-run 10000000
+run 10000000 upto
