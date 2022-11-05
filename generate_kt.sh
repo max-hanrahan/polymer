@@ -2,15 +2,13 @@ PVAR=0.0
 NVAR=8000
 FVAR=5
 
+# read user input
+KVAR=$1
+TVAR=$2
+
 printf "Pressure: $PVAR\n"
 printf "Num. Atoms: $NVAR\n"
-# printf "Pdamp: $FVAR\n" todo: check with Starr to make sure this is right
-
-printf "Enter k-value: (int or float)\n"
-read KVAR
-
-printf "Enter t-value: (float)\n"
-read TVAR
+printf "Stiffened Chains: $FVAR\n" todo: check with Starr to make sure this is right
 
 # if needed, make the specific directories
 mkdir -p k${KVAR}; mkdir -p k${KVAR}/t${TVAR}

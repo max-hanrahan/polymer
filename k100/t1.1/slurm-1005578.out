@@ -1,0 +1,23 @@
+	linux-vdso.so.1 (0x00007ffdde7b8000)
+	libjpeg.so.62 => /lib64/libjpeg.so.62 (0x00007f44e3722000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f44e3502000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007f44e32fe000)
+	libutil.so.1 => /lib64/libutil.so.1 (0x00007f44e30fa000)
+	libmpi_cxx.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi_cxx.so.1 (0x00007f44e2ee0000)
+	libmpi.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi.so.1 (0x00007f44e2c04000)
+	libstdc++.so.6 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libstdc++.so.6 (0x00007f44e2824000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f44e24a2000)
+	libgcc_s.so.1 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libgcc_s.so.1 (0x00007f44e228a000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f44e1ec5000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f44e398b000)
+	libopen-rte.so.7 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-rte.so.7 (0x00007f44e1c4a000)
+	libopen-pal.so.6 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-pal.so.6 (0x00007f44e1967000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007f44e175f000)
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 4 slots 
+that were requested by the application:
+  /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------

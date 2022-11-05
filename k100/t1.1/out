@@ -1,0 +1,105 @@
+	linux-vdso.so.1 (0x00007fff537a4000)
+	libjpeg.so.62 => /lib64/libjpeg.so.62 (0x00007f7fd56e3000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f7fd54c3000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007f7fd52bf000)
+	libutil.so.1 => /lib64/libutil.so.1 (0x00007f7fd50bb000)
+	libmpi_cxx.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi_cxx.so.1 (0x00007f7fd4ea1000)
+	libmpi.so.1 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libmpi.so.1 (0x00007f7fd4bc5000)
+	libstdc++.so.6 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libstdc++.so.6 (0x00007f7fd47e5000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f7fd4463000)
+	libgcc_s.so.1 => /opt/ohpc/pub/compiler/gcc/9.4.0/lib64/libgcc_s.so.1 (0x00007f7fd424b000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f7fd3e86000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f7fd594c000)
+	libopen-rte.so.7 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-rte.so.7 (0x00007f7fd3c0b000)
+	libopen-pal.so.6 => /share/apps/CENTOS6/openmpi/1.8.4/lib/libopen-pal.so.6 (0x00007f7fd3928000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007f7fd3720000)
+LAMMPS (19 Mar 2020)
+Reading data file ...
+  orthogonal box = (-10 -10 -10) to (10 10 10)
+  2 by 2 by 2 MPI processor grid
+  reading atoms ...
+  8000 atoms
+  reading velocities ...
+  8000 velocities
+  scanning bonds ...
+  1 = max bonds/atom
+  scanning angles ...
+  1 = max angles/atom
+  reading bonds ...
+  7200 bonds
+  reading angles ...
+  320 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:   0          0          0         
+  special bond factors coul: 0          0          0         
+  2 = max # of 1-2 neighbors
+  2 = max # of 1-3 neighbors
+  4 = max # of 1-4 neighbors
+  6 = max # of special neighbors
+  special bonds CPU = 0.000946999 secs
+  read_data CPU = 0.034965 secs
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:   0          1          1         
+  special bond factors coul: 0          1          1         
+  2 = max # of 1-2 neighbors
+  6 = max # of special neighbors
+  special bonds CPU = 0.000390053 secs
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 2.8
+  ghost atom cutoff = 2.8
+  binsize = 1.4, bins = 15 15 15
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : lj
+  Current step  : 0
+  Time step     : 0.002
+WARNING: Inconsistent image flags (../domain.cpp:785)
+Per MPI rank memory allocation (min/avg/max) = 6.496 | 6.516 | 6.649 Mbytes
+Step KinEng PotEng TotEng E_pair E_bond E_angle Press Temp Lx Volume 
+       0   0.48448444    15.713638    16.198123   -5.6481987    18.329377    3.0324602   -1.5880033   0.32303001           20         8000 
+    1000    1.6068041    14.373008    15.979812   -4.5459972    18.649487   0.26951805   0.87488999    1.0713367    20.770252    8960.3572 
+    2000    1.6283089     14.46098    16.089289     -4.32859    18.654805   0.13476504   0.17231742     1.085675    21.050562    9328.0546 
+    3000    1.6497544    14.546964    16.196718   -4.2393377    18.694669  0.091632494   0.12706316    1.0999738    21.151043    9462.2711 
+    4000    1.6726996    14.553856    16.226555   -4.1822944    18.675314  0.060835471 -0.068346898    1.1152725    21.213788    9546.7311 
+    5000    1.6715906    14.512427    16.184018   -4.2133988    18.672417  0.053408894 -0.0066701657    1.1145331    21.174377    9493.6214 
+    6000    1.6342019    14.515546    16.149748   -4.2098193    18.673771  0.051594903  -0.19100671    1.0896041    21.182471    9504.5126 
+    7000    1.6645119    14.524421    16.188933   -4.2037837    18.680229  0.047975424 -0.043712964    1.1098133     21.18246    9504.4974 
+    8000    1.6434307    14.499739    16.143169   -4.2154883    18.668465  0.046762139  0.023918601    1.0957574    21.174368    9493.6095 
+    9000    1.6461949    14.494502    16.140697   -4.2361892    18.683467  0.047224028   0.21255203    1.0976005    21.120759    9421.6847 
+   10000    1.6545637    14.548331    16.202895   -4.1898582    18.688175  0.050014987  -0.12141172    1.1031804    21.190624    9515.4915 
+Loop time of 10.5132 on 8 procs for 10000 steps with 8000 atoms
+
+Performance: 164364.563 tau/day, 951.184 timesteps/s
+99.6% CPU use with 8 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 6.4863     | 6.8702     | 7.2701     |   9.0 | 65.35
+Bond    | 0.34309    | 0.35628    | 0.37442    |   1.6 |  3.39
+Neigh   | 1.3482     | 1.3484     | 1.3487     |   0.0 | 12.83
+Comm    | 0.83254    | 1.2408     | 1.6133     |  21.2 | 11.80
+Output  | 0.12851    | 0.12852    | 0.1286     |   0.0 |  1.22
+Modify  | 0.49402    | 0.50292    | 0.50764    |   0.7 |  4.78
+Other   |            | 0.06615    |            |       |  0.63
+
+Nlocal:    1000 ave 1017 max 985 min
+Histogram: 1 2 0 1 0 1 0 1 1 1
+Nghost:    2583.25 ave 2603 max 2564 min
+Histogram: 2 0 0 0 2 2 0 0 0 2
+Neighs:    37086.4 ave 38441 max 35889 min
+Histogram: 1 1 1 1 1 0 0 2 0 1
+
+Total # of neighbors = 296691
+Ave neighs/atom = 37.0864
+Ave special neighs/atom = 1.8
+Neighbor list builds = 653
+Dangerous builds = 30
+Total wall time: 0:00:10
