@@ -17,7 +17,7 @@ dimension 	3
 atom_style	angle
 angle_style	cosine
 #read_data ${filename}.lmp # use this if first time running
-read_restart ${filename}-1.res 
+read_restart k50t1.2p0.0f5n8000npt-1.res
 
 pair_style	lj/cut	2.5
 #when using global * * the cutoff should be the smallest of all possible pairs
