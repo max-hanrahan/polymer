@@ -12,6 +12,8 @@ printf "Stiffened Chains: $FVAR\n" todo: check with Starr to make sure this is r
 
 # if needed, make the specific directories
 mkdir -p k${KVAR}; mkdir -p k${KVAR}/t${TVAR}
+# copy t1.2 restart to this new directory:
+cp k${KVAR}/t1.2/k${KVAR}t1.2p0.0f5n8000npt-1.res k${KVAR}/t${TVAR}/
 
 cp -r kkk/ttt/. k${KVAR}/t${TVAR}/ # copy abstract directory contents into specific dir
 cd k${KVAR}/t${TVAR}/
@@ -29,4 +31,4 @@ sed -i "s/{{p}}/$PVAR/g" cpu.sub; # etc...
 sed -i "s/{{n}}/$NVAR/g" cpu.sub; # etc...
 sed -i "s/{{f}}/$FVAR/g" cpu.sub; # etc...
 
-sbatch cpu.sub && cd ../../
+# sbatch cpu.sub && cd ../../

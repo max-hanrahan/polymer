@@ -18,11 +18,8 @@ history > history_for_print.txt # creates a text file of full command-line histo
 grep -rnw '/path/to/somewhere/' -e 'pattern' # greps for the 'pattern'!
 cp -r t1.0/. t0.9/ # copy files without the parent folder
 
-cp -r kkk/ttt/. k5/t1.0/ # copy abstract directory contents into specific dir
-cd k5/t1.0/
-sed -i 's/kkk/5/g' *; rename kkk 5 * # change all kkk -> specific k
-sed -i 's/TTT/1.0/g' *; rename TTT 1.0 * # change all ttt -> specific t
-sbatch cpu.sub && cd ../../
+squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me # show the full names of all your jobs
+
 
 
 ls -I "*.res # list all files in directory not of extension ".res"

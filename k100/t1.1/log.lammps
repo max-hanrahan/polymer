@@ -13,6 +13,11 @@ variable filename string k100t1.1p${p}f${f}n${n}npt
 variable filename string k100t1.1p0.0f${f}n${n}npt
 variable filename string k100t1.1p0.0f5n${n}npt
 variable filename string k100t1.1p0.0f5n8000npt
+variable config string k${k}t1.2p${p}f${f}n${n}npt #ugly but works for now
+variable config string k100t1.2p${p}f${f}n${n}npt 
+variable config string k100t1.2p0.0f${f}n${n}npt 
+variable config string k100t1.2p0.0f5n${n}npt 
+variable config string k100t1.2p0.0f5n8000npt 
 
 log ${filename}.log
 log k100t1.1p0.0f5n8000npt.log

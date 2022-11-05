@@ -7,6 +7,7 @@ variable n world nnn
 variable f world fff # world ensures leading zeros get passed
 
 variable filename string k${k}t${T}p${p}f${f}n${n}npt
+variable config string k${k}t1.2p${p}f${f}n${n}npt #ugly but works for now
 
 log ${filename}.log
 units 		lj
@@ -17,7 +18,7 @@ dimension 	3
 atom_style	angle
 angle_style	cosine
 #read_data ${filename}.lmp # use this if first time running
-read_restart ${filename}-1.res 
+read_restart ${config}-1.res 
 
 pair_style	lj/cut	2.5
 #when using global * * the cutoff should be the smallest of all possible pairs
@@ -47,4 +48,4 @@ restart 1000 ${filename}-1.res ${filename}-2.res
 
 timestep 0.002
 
-run 10000000 upto
+run 10000000 # might reset to upto
