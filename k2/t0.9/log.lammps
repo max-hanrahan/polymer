@@ -1,0 +1,23 @@
+LAMMPS (19 Mar 2020)
+# Abstract LAMMPS input file
+
+variable k world 2
+variable T world 0.9
+variable p world 0.0
+variable n world 8000
+variable f world 5 # world ensures leading zeros get passed
+
+variable filename string k${k}t${T}p${p}f${f}n${n}npt
+variable filename string k2t${T}p${p}f${f}n${n}npt
+variable filename string k2t0.9p${p}f${f}n${n}npt
+variable filename string k2t0.9p0.0f${f}n${n}npt
+variable filename string k2t0.9p0.0f5n${n}npt
+variable filename string k2t0.9p0.0f5n8000npt
+variable config string k${k}t1.2p${p}f${f}n${n}npt #ugly but works for now
+variable config string k2t1.2p${p}f${f}n${n}npt 
+variable config string k2t1.2p0.0f${f}n${n}npt 
+variable config string k2t1.2p0.0f5n${n}npt 
+variable config string k2t1.2p0.0f5n8000npt 
+
+log ${filename}.log
+log k2t0.9p0.0f5n8000npt.log
