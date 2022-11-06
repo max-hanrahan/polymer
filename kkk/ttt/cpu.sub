@@ -4,7 +4,7 @@
 # Always put your SBATCH parameters at the top of your batch script.
 #
 # GENERAL
-#SBATCH --job-name="k={{k}},t={{T}},p={{p}},n={{n}},f={{f}}"
+#SBATCH --job-name="k{{k}}t{{T}}p{{p}}n{{n}}f{{f}}"
 #SBATCH --output=out   # or both in default file
 #SBATCH --error=err    # slurm-$SLURM_JOBID.out
 #SBATCH --mail-type=END,FAIL

@@ -8,8 +8,6 @@ for dir in k*; do cp -i $dir/dump${dir:1}.xyz .; done; # copies each dump file b
 for kdir in k*; do mv $kdir/t0.5p0.0n8000npt* $kdir/t1.2; done; # move all t0.5 files to each appropriate t1.2 directory
 for kdir in k*; do rename $kdir/t1.2/t0.5p $kdir/t1.2/t1.2p *; done; # rename all t0.5 to t1.2
 
-do rename t1.2 t0.9 *; # rename t1.2 -> t0.9
-
 for dir in k*; do for i in $(seq 0.5 0.1 1.2); do mkdir ${dir}/t$i; done; done; # creates the temperature directories in each k-directory.
 
 xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat -bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7 # heinous command to load in all the data
@@ -19,7 +17,5 @@ grep -rnw '/path/to/somewhere/' -e 'pattern' # greps for the 'pattern'!
 cp -r t1.0/. t0.9/ # copy files without the parent folder
 
 squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me # show the full names of all your jobs
-
-
 
 ls -I "*.res # list all files in directory not of extension ".res"
