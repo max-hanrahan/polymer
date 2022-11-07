@@ -1,17 +1,16 @@
 # Abstract LAMMPS input file
 
-variable k world kkk
-variable T world TTT
-variable p world ppp
-variable n world nnn
-variable f world fff # world ensures leading zeros get passed
+variable k world 1
+variable T world 0.8
+variable p world 0.0
+variable n world 8000
+variable f world 5 # world ensures leading zeros get passed
 variable eps world 1.0 # todo: generalize this
 
 variable filename string k${k}t${T}p${p}f${f}n${n}npt
-variable T_high world T + 0.3
-variable config string k${k}t${T_high}${p}f${f}n${n}npt
 
-compute bbe 1 bond # bbe = bond-bond-energy (todo: check this is right)
+
+#compute bbe all bond # bbe = bond-bond-energy (todo: check this is right)
 
 log ${filename}.log
 units 		lj
@@ -21,6 +20,10 @@ dimension 	3
 # if there are angular potentials, use next line
 atom_style	angle
 angle_style	cosine
+
+variable T_high equal "T + 0.3" # the higher temp from which we equilibrate
+variable config string k${k}t${T_high}${p}f${f}n${n}npt
+
 #read_data ${filename}.lmp # use this if first time running
 read_restart ${config}-1.res
 
@@ -42,7 +45,7 @@ fix	1	all npt	temp ${T} ${T}  1.0   iso ${p} ${p} 5.0
 fix cmvel all momentum 1000 linear 1 1 1
 
 # todo: find a way to store energy between two different types of poly chains
-thermo_style custom step ke pe etotal epair ebond eangle bbe press temp lx vol
+thermo_style custom step ke pe etotal epair ebond eangle press temp lx vol
 thermo 1000
 
 dump 1 all xyz	100000	dump${filename}.xyz
