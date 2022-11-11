@@ -1,0 +1,1000 @@
+   51  squeue | grep mhanrahan
+   52  squeue | grep mhanr
+   53  cd k50/t1.2
+   54  sbatch cpu.sub
+   55  squeue
+   56  cd ../..
+   57  vim kkk/ttt/cpu.sub 
+   58  squeue
+   59  cd kkk/ttt
+   60  ls
+   61  vim cpu.sub 
+   62  sbatch cpu.sub
+   63  squeue
+   64  cd ../..
+   65  sh generate_kt.sh 
+   66  cd k50/t1.2
+   67  ls
+   68  more slurm-100557.out
+   69  more slurm-1005577.out
+   70  ls -lrt
+   71  cd ../..
+   72  vim kkk/ttt/cpu.sub 
+   73  sh generate_kt.sh 
+   74  cd k50/t1.2
+   75  ls
+   76  more k50t1.2p0.0f5n8000npt.inp
+   77  more *.sub
+   78  sbatch cpu.sub 
+   79  squeue
+   80  more out
+   81  vim cpu.sub 
+   82  cd ../..
+   83  vim kkk/ttt/cpu.sub 
+   84  sh generate_kt.sh 
+   85  cd k50/t1.2
+   86  ls
+   87  more cpu.sub 
+   88  sbatch cpu.sub
+   89  squeue
+   90  ls
+   91  more k50t1.2p0.0f5n8000npt.lmp
+   92  squeue
+   93  more cpu.sub 
+   94  vim cpu.sub 
+   95  sbatch cpu.sub 
+   96  squeue
+   97  more out
+   98  more cpu.sub 
+   99  cd ../..
+  100  vim kkk/ttt/cpu.sub 
+  101  sh generate_kt.sh 
+  102  squeue
+  103  cd k50/t1.2
+  104  ls
+  105  ls -lrt
+  106  more err
+  107  more *.inp
+  108  more *.sub
+  109  sbatch cpu.sub 
+  110  squeue
+  111  more out
+  112  cd ../..
+  113  vim kkk/ttt/cpu.sub 
+  114  vim kkk/ttt/*.inp
+  115  sh generate_kt.sh 
+  116  cd k50/t1.2
+  117  ls
+  118  ls -lrt
+  119  more out
+  120  ls -lrt
+  121  rm *.out
+  122  sbatch cpu.sub 
+  123  squeue
+  124  squee
+  125  squeue
+  126  more out
+  127  ssh n46
+  128  squeue
+  129  fg
+  130  mhanraha
+  131  cd polymers/
+  132  cd k1/t1.2/
+  133  ls
+  134  cd ../..
+  135  squeue
+  136  cd ../..
+  137  cd ~mhanrahan/polymers/
+  138  ls
+  139  cd k5
+  140  ls
+  141  cd k5/t1.2
+  142  cd t1.2
+  143  ls
+  144  more out
+  145  more cpu.sub 
+  146  more out
+  147  squeue
+  148  pwd
+  149  squeue
+  150  cd ../..
+  151  more k100/t100
+  152  more k100/t1.2
+  153  cd k100/t1.2
+  154  ls
+  155  more out
+  156  squeue
+  157  cd ../..
+  158  vim kkk/ttt/cpu.sub 
+  159  scancel 1005602
+  160  scancel 1005601
+  161  squeue
+  162  cd ../..
+  163  cd ~mhanrahan/polymers/
+  164  ls
+  165  sh generate_kt.sh 
+  166  squeue
+  167  ssh @n57
+  168  ssh n57
+  169  ls
+  170  scontrol
+  171  sinfo
+  172  sinfo n57
+  173  sacct
+  174  ps
+  175  top
+  176  squeu
+  177  squeue
+  178  top
+  179  squeue
+  180  top 1005609
+  181  top u mhanrahan
+  182  cd ~mhanrahan/polymers/
+  183  ls
+  184  cd k1/t1.2
+  185  ls
+  186  more out
+  187  tail out
+  188  more out
+  189  tail out
+  190  pwd
+  191  squeue
+  192  ssh n56
+  193  top
+  194  cd ../..
+  195  cd ~mhanrahan/polymers/
+  196  cd kkk/ttt
+  197  vim cpu.sub 
+  198  cd ../..
+  199  squeue
+  200  scancel 1005600
+  201  scancel 1005599
+  202  scancel 1005597
+  203  scancel 1005596
+  204  scancel 1005595
+  205  sh generate_kt.sh 
+  206  squeue
+  207  top
+  208  ssh n55
+  209  top
+  210  squeue
+  211  scancel 1005614
+  212  cd ~mhanrahan/polymers/
+  213  ls
+  214  vim kkk/ttt/cpu.sub 
+  215  sh generate_kt.sh 
+  216  ssh mhanrahan@cottontail2.wesleyan.edu
+  217  ssh mhanrahan@greentail52.wesleyan.edu
+  218  ssh n56
+  219  top
+  220  squeue
+  221  scancel 1005618
+  222  cd ~mhanrahan/polymers/
+  223  vim kkk/ttt/cpu.sub 
+  224  vim k*/t1.2/cpu.sub 
+  225  scancel 1005618
+  226  scancel 1005617
+  227  scancel 1005616
+  228  scancel 1005615
+  229  scancel 1005609
+  230  scancel 1005608
+  231  squeue
+  232  ls k20/t1.2
+  233  clear
+  234  cd k50
+  235  cd polymers/
+  236  ls
+  237  cd k100/t1.2/
+  238  ls
+  239  squeue
+  240  scancel 1005353
+  241  squeue
+  242  ls
+  243  rm -r .
+  244  cd ..
+  245  rm -r t1.2
+  246  ls
+  247  cd t1.2
+  248  cd ../..
+  249  cd k50/t1.2
+  250  cd ../..
+  251  cd k100/t1.2
+  252  cd ../..
+  253  sh generate_kt.sh 
+  254  cd k100/t1.2/
+  255  sbatch cpu.sub
+  256  squeue
+  257  scancel 1005585
+  258  cd ../..
+  259  
+  260  more *.sub
+  261  ls
+  262  more *.inp
+  263  vim cpu.sub 
+  264  vim *.inp
+  265  cd ../..
+  266  squeue
+  267  sh generate_kt.sh 
+  268  cd k100/t1.2
+  269  sbatch cpu.sub 
+  270  squeue
+  271  more out
+  272  more dumpk100t1.2p0.0f5n8000npt.xyz 
+  273  ls
+  274  ls -lrt
+  275  squeue
+  276  ls -lrt
+  277  pwd
+  278  more out
+  279  cd ../..
+  280  vim kkk/ttt/
+  281  vim kkk/ttt/cpu.sub 
+  282  cd k100/t1.2
+  283  sbatch cpu.sub 
+  284  squeue
+  285  cd ../..
+  286  ls
+  287  cd kkk/ttt
+  288  ls
+  289  vim cpu.sub 
+  290  cd../..
+  291  cd ../..
+  292  sh generate_kt.sh 
+  293  cd k100/t1.1
+  294  ls
+  295  more *.inp
+  296  sbatch cpu.sub
+  297  squeue
+  298  ls
+  299  more out
+  300  vim cpu.sub 
+  301  vim *.inp
+  302  sbatch cpu.sub
+  303  squeue
+  304  cd ../..
+  305  vim generate_kt.sh 
+  306  squeue
+  307  cd k50/t1.2
+  308  ls
+  309  ls -lrt
+  310  more filename.log 
+  311  ls
+  312  ls -lrt
+  313  pwd
+  314  squeue
+  315  mkdir backup
+  316  mv *.res backup
+  317  ls
+  318  cd ..
+  319  rm t1.2
+  320  rm -r t1.2
+  321  ls
+  322  cd t1.2/
+  323  ls
+  324  ls backup/
+  325  cd backup/
+  326  mv * ..
+  327  ls
+  328  cd ..
+  329  ls
+  330  rm -r backup/
+  331  ls
+  332  squeue
+  333  scancel 1005584
+  334  cd ../..
+  335  cd kkk/ttt/
+  336  ls
+  337  rm slurm-1005578.out 
+  338  vim *.inp
+  339  squeue
+  340  cd ../..
+  341  sh generate_kt.sh 
+  342  cd k50/t1.2
+  343  ls -lrt
+  344  squeue
+  345  cd ../..
+  346  sh generate_kt.sh 
+  347  cd k20/t1.2
+  348  ls
+  349  squeue
+  350  cd ../..
+  351  cd kkk/ttt
+  352  ls
+  353  vim *.inp
+  354  cd ../..
+  355  sh generate_kt.sh 
+  356  squeue
+  357  scancel 1005351
+  358  cd k20/t1.2
+  359  ls
+  360  cd ../..
+  361  cd kkk/ttt
+  362  ls
+  363  vim *.inp
+  364  more cpu.sub 
+  365  cd ../..
+  366  squeue
+  367  ls  k20/t1.2/
+  368  sh generate_kt.sh 
+  369  cd k10/t1.2
+  370  cd ../..
+  371  sh generate_kt.sh 
+  372  sh generate_kt.sh 
+  373  cd k10/t1.2
+  374  ls
+  375  squeue
+  376  scancel 1005598
+  377  cd ../..
+  378  sh generate_kt.sh 
+  379  squeue
+  380  scancel 1005349
+  381  squeue
+  382  sh generate_kt.sh 
+  383  squeue
+  384  scancel 1005348
+  385  squeue
+  386  sh generate_kt.sh 
+  387  scancel 1005347
+  388  squeue
+  389  sh generate_kt.sh 
+  390  git add -u .
+  391  git commit -m "set higher number of cores consistently"
+  392  git push
+  393  cd polymers/
+  394  ls
+  395  $ rm -i !(*.zip)
+  396  rm -i !(*.res)
+  397  rm -ir !(*.res)
+  398  cd k1/t1.2
+  399  ls
+  400  rm -i !(*.res)
+  401  cd ../..
+  402  cd k2/t1.2
+  403  rm -i !(*.res)
+  404  cd ../..; cd k5/t1.2
+  405  \rm -i !(*.res)
+  406  cd ../..; cd k10/t1.2
+  407  ls
+  408  cd ../..; cd k10/t1.2
+  409  \rm -i !(*.res)
+  410  ls
+  411  cd ../..; cd k20/t1.2
+  412  \rm -i !(*.res)
+  413  cd ../..; cd k50/t1.2
+  414  \rm -i !(*.res)
+  415  cd ../..; cd k100/t1.2
+  416  \rm -i !(*.res)
+  417  squeue
+  418  cd ../..
+  419  vim generate_kt.sh 
+  420  vim -b generate_kt.sh 
+  421  sh generate_kt.sh 1 1.2
+  422  scancel 1005619
+  423  vim generate_kt.sh 
+  424  sh generate_kt.sh 1 1.2
+  425  sh generate_kt.sh 2 1.2
+  426  sh generate_kt.sh 5 1.2
+  427  sh generate_kt.sh 10 1.2
+  428  sh generate_kt.sh 20 1.2
+  429  sh generate_kt.sh 50 1.2
+  430  sh generate_kt.sh 100 1.2
+  431  squeue
+  432  top
+  433  squeue
+  434  ssh n54
+  435  top
+  436  squeue
+  437  scancel 1005625
+  438  scancel 1005626
+  439  squeue
+  440  cd polymers/k50/t1.2
+  441  ls
+  442  vim cpu.sub 
+  443  cd ../..
+  444  sh generate_kt.sh 
+  445  scancel 1005627
+  446  sh generate_kt.sh 50 1.2
+  447  squeue
+  448  vim k100/t1.2
+  449  vim k100/t1.2/cpu.sub 
+  450  sh generate_kt.sh 100 1.2
+  451  squeue
+  452  more k1/t1.2/out
+  453  squeue
+  454  top
+  455  squeue
+  456  more k*/t*/out
+  457  squeue
+  458  more k1/t1.2/out
+  459  more k2/t1.2/out
+  460  more k5/t1.2/out
+  461  more k10/t1.2/out
+  462  more k20/t1.2/out
+  463  more k50/t1.2/out
+  464  cd k50/t1.2
+  465  ls
+  466  squeue
+  467  cd ../..
+  468  top
+  469  squeue
+  470  top
+  471  cd po
+  472  cd polymers/
+  473  more k1/t1.2/out
+  474  tail k1/t1.2/out
+  475  squeue
+  476  squeue | grep mhass
+  477  squeue | grep mhas
+  478  squeue | grep mha
+  479  squeue | grep tar
+  480  scancel 1005620
+  481  scancel 1005621
+  482  scancel 1005622
+  483  scancel 1005623
+  484  scancel 1005624
+  485  tail k*/t1.2/out
+  486  squeue
+  487  vim k*/t.2/cpu.sub
+  488  vim k*/t1.2/cpu.sub
+  489  cd k1/t1.2 && sbatch cpu.sub && ../..
+  490  cd k2/t1.2 && sbatch cpu.sub && ../..
+  491  cd ../..
+  492  cd k2/t1.2 && sbatch cpu.sub && cd ../..
+  493  cd ../..
+  494  cd k5/t1.2 && sbatch cpu.sub && cd ../..
+  495  vim k1/t1.2
+  496  vim k1/t1.2/cpu.sub
+  497  cd ../..
+  498  vim k1/t1.2/cpu.sub
+  499  cd k1/t1.2
+  500  sbatch cpu.sub
+  501  cd ../.. && vim k1/t1.2/cpu.sub
+  502   vim k2/t1.2/cpu.sub
+  503  cd k2/t1.2 && sbatch cpu.sub && cd ../..
+  504   vim cpu.sub
+  505  sbatch cpu.sub && cd ../..
+  506   vim k2/t1.2/cpu.sub
+  507  vim cpu.sub 
+  508  sbatch cpu.sub && cd ../..
+  509  vim cpu.sub 
+  510  sbatch cpu.sub && cd ../..
+  511   vim k5/t1.2/cpu.sub
+  512  cd k5/t1.2 && sbatch cpu.sub
+  513  vim cpu.sub 
+  514  cd ../..
+  515  squeue
+  516  cd k10/t1.2 && sbatch cpu.sub
+  517  cd k10/t1.2 && vim cpu.sub 
+  518  vim cpu.sub 
+  519  sbatch cpu.sub 
+  520  cd ../..
+  521  cd k20/t1.2 && vim cpu.sub 
+  522  sbatch cpu.sub 
+  523  cd ../..
+  524  cd k50/t1.2 && vim cpu.sub 
+  525  cd ../..
+  526  sbatch cpu.sub 
+  527  cd k50/t1.2 && sbatch cpu.sub 
+  528  squeue
+  529  scancel 1005661
+  530  squeue
+  531  ssh n54
+  532  ls
+  533  cd polymers/
+  534  ls -lrt k100/t1.2
+  535  ls -lrt k*/t1.2
+  536  squeue
+  537  ssh n57
+  538  ssh n56
+  539  ssh n54
+  540  ssh n58
+  541  squeue
+  542  top
+  543  ssh n57 && top
+  544  ssh n56
+  545  ssh n55
+  546  ssh n54
+  547  squeue
+  548  squeue | grep n54
+  549  scancel 1005654
+  550  cd polymers/k1/t1.2/
+  551  vim cpu.sub 
+  552  sbatch cpu.sub
+  553  scancel 1005628
+  554  cd ../..
+  555  cd polymers/k50/t1.2/
+  556  cd k50/t1.2/
+  557  scancel 1005628
+  558  more *.inp
+  559  vim cpu.sub 
+  560  sbatch cpu.sub 
+  561  squeue
+  562  sbatch cpu.sub 
+  563  vim cpu.sub 
+  564  sbatch cpu.sub 
+  565  cd ../..
+  566  squeue
+  567  ssh n53
+  568  ssh n54
+  569  ssh n55
+  570  ssh n56
+  571  ssh n57
+  572  ssh n58
+  573  ssh n59
+  574  ssh n60
+  575  cd polymers/
+  576  git add .
+  577  git commit -m "everything seems to be working"
+  578  git push
+  579  squeue
+  580  cd k50/t1.2/
+  581  ls
+  582  ls -lrt
+  583  vim *.inp
+  584  cd ../..
+  585  ls -lrt k1/t1.2
+  586  ls -lrt k2/t1.2
+  587  ls -lrt k5/t1.2
+  588  ls -lrt k10/t1.2
+  589  ls -lrt k20/t1.2
+  590  ls -lrt k100/t1.2
+  591  ls -lrt k50/t1.2
+  592  squeue
+  593  scancel 1005665
+  594  cd k50/t1.2
+  595  ls
+  596  cd ../..
+  597  diff k100/t1.2/*.inp k50/t1.2/*.inp
+  598  diff k100/t1.2/*.lmp k50/t1.2/*.lmp
+  599  diff k100/t1.2/*.sub k50/t1.2/*.sub
+  600  squeue
+  601  ls
+  602  cd k50/t1.2
+  603  ls
+  604  sbatch cpu.sub 
+  605  squeue
+  606  ssh n53
+  607  top
+  608  ls
+  609  cd polymers/k50/t1.2/
+  610  ls -lrt
+  611  vim *.inp
+  612  squeue
+  613  scancel 1005666
+  614  sbatch cpu.sub 
+  615  ls -lrt
+  616  cd ../..
+  617  ls
+  618  cd k100/t1.2
+  619  ls
+  620  ls -lrt
+  621  more out
+  622  tail out
+  623  head out
+  624  less out
+  625  cd polymers/
+  626  squeue -u mhanrahan
+  627  ssh n53
+  628  top
+  629  ssh n55
+  630  top
+  631  cd polymers/
+  632  git add .
+  633  git commit -m "k1, k2, k5 complete"
+  634  git push
+  635  git add -u .
+  636  git commit -m "removed junk files"
+  637  git push
+  638  clear
+  639  more k10/t1.2/out
+  640  tail k10/t1.2/out
+  641  tail k20/t1.2/out
+  642  tail k50/t1.2/out
+  643  tail k100/t1.2/out
+  644  squeue
+  645  git add .
+  646  git commit -m "k=10 completed"
+  647  git push
+  648  git add .
+  649  git commit -m "k=20 completed"
+  650  git push
+  651  squeue
+  652  more k100/t1.2/out
+  653  tail k100/t1.2/out
+  654  tail k50/t1.2/out
+  655  git add .
+  656  git commit -m "k100, t=1.2 finished"
+  657  git push
+  658  ls -lrt
+  659  squeue
+  660  scancel 1005667
+  661  cd k50/t1.2/
+  662  ls
+  663  rm cpu.sub 
+  664  rm err
+  665  rm *.err
+  666  ls
+  667  rm *.lmp
+  668  rm *.inp
+  669  rm out
+  670  rm *.lammps
+  671  ls
+  672  rm *.log
+  673  cd ../..
+  674  sh generate_kt.sh 50 1.2
+  675  cd k50/t1.2
+  676  ls
+  677  more out
+  678  ls -lrt
+  679  squeue
+  680  scancel 1005668
+  681  ls
+  682  vim *.inp
+  683  squeue
+  684  cd ../..
+  685  sh generate_kt.sh 50 1.2
+  686  squeue
+  687  cd k50/t1.2
+  688  ls
+  689  more out
+  690  squeue
+  691  scancel 1005669
+  692  cd ../..
+  693  rm -r k50/t1.2
+  694  sh generate_kt.sh 50 1.2
+  695  more k50/t1.2/out
+  696  cd k50/t1.2
+  697  vim *.inp
+  698  sbatch cpu.sub 
+  699  squeue
+  700  more out
+  701  ls -lrt
+  702  more out
+  703  ls -lrt
+  704  tail dumpk50t1.2p0.0f5n8000npt.xyz 
+  705  more dumpk50t1.2p0.0f5n8000npt.xyz 
+  706  squeue
+  707  ssh n54
+  708  clear
+  709  cd polymers/
+  710  vim generate_kt.sh 
+  711  sh generate_kt.sh 1 1.1
+  712  cd k1
+  713  cd t1.2
+  714  cd ../..
+  715  vim generate_kt.sh 
+  716  sh generate_kt.sh 1 1.1
+  717  cd k1/t1.1
+  718  ls
+  719  sbatch cpu.sub
+  720  ls -lrt
+  721  more out
+  722  cd ../..
+  723  cd kkk/ttt
+  724  vim *.inp
+  725  cd ../..
+  726  \rm -r k1/t1.1
+  727  sh generate_kt.sh 1 1.1
+  728  cd k1/t1.1
+  729  ls
+  730  sbatch cpu.sub
+  731  squeue
+  732  more out
+  733  cd ../..
+  734  vim kkk/ttt*.inp
+  735  vim kkk/ttt/*.inp
+  736  \rm -r k1/t1.1
+  737  sh generate_kt.sh 1 1.1
+  738  cd k1/t1.1
+  739  sbatch cpu.sub 
+  740  squeue
+  741  more out
+  742  top
+  743  cd ../..
+  744  vim generate_kt.sh 
+  745  sh generate_kt.sh 2 1.1
+  746  sh generate_kt.sh 5 1.1
+  747  sh generate_kt.sh 10 1.1
+  748  top
+  749  squeue
+  750  scnancel 1005675
+  751  scancel 1005675
+  752  scancel 1005676
+  753  scancel 1005677
+  754  squeue
+  755  top
+  756  vim generate_kt.sh 
+  757  rm -r k*/t1.1
+  758  y
+  759  sh generate_kt.sh 
+  760  ls
+  761  \rm -r k/t/
+  762  ls
+  763  \rm -r k
+  764  ls
+  765  ls k*
+  766  rm k1/t1.1
+  767  rm -r k1/t1.1
+  768  clear
+  769  sh generate_kt.sh 20 1.1
+  770  sh generate_kt.sh 10 1.1
+  771  sh generate_kt.sh 5 1.1
+  772  sh generate_kt.sh 2 1.1
+  773  for dir in k*; do sh generate_kt.sh 1 1.0
+  774  squeue
+  775  vim k*/t1.1
+  776  vim k*/t1.1/cpu.sub
+  777  cd k2/t1.1 && sbatch cpu.sub && cd ../..
+  778  cd k5/t1.1 && sbatch cpu.sub && cd ../..
+  779  cd k10/t1.1 && sbatch cpu.sub && cd ../..
+  780  cd k20/t1.1 && sbatch cpu.sub && cd ../..
+  781  squeue
+  782  for dir in k*; do generate_kt.sh {dir:1} 1.0; done
+  783  for dir in k*; do sh generate_kt.sh {dir:1} 1.0; done
+  784  for dir in k*; do sh generate_kt.sh ${dir:1} 1.0; done
+  785  ls
+  786  rm -r k\{dir\:1\}/
+  787  ls
+  788  squeue
+  789  vim k*/t1.0/cpu.sub
+  790  ls
+  791  rm -r kkk/t1.0
+  792  cd k1/t1.0/ && sbatch cpu.sub && cd ../..
+  793  cd k2/t1.0/ && sbatch cpu.sub && cd ../..
+  794  cd ../..
+  795  cd k2/t1.0/ && sbatch cpu.sub && cd ../..
+  796  sinfo
+  797  squeue
+  798  cd ../..
+  799  vim k*/t1.0/cpu.sub
+  800  cd k1/t1.0/ && sbatch cpu.sub && cd ../..
+  801  cd k2/t1.0/ && sbatch cpu.sub && cd ../..
+  802  cd k5/t1.0/ && sbatch cpu.sub && cd ../..
+  803  cd k10/t1.0/ && sbatch cpu.sub && cd ../..
+  804  cd k20/t1.0/ && sbatch cpu.sub && cd ../..
+  805  cd k100/t1.0/ && sbatch cpu.sub && cd ../..
+  806  squeue
+  807  squeue -u
+  808  squeue -u mhanrahan
+  809  sacct --format="JobID,JobName%30"
+  810  squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me
+  811  cd k100/t1.1
+  812  cd k100/t1.1/
+  813  ls
+  814  ls k100
+  815  sh generate_kt.sh 100 1.1
+  816  cd k100/t1.1
+  817  vim cpu.sub 
+  818  sbatch cpu.sub
+  819  squeue
+  820  top
+  821  ssh n55
+  822  ssh n56
+  823  ssh n57
+  824  ssh n58
+  825  ssh n59
+  826  squeue
+  827  ssh n46
+  828  ssh n47
+  829  ssh n48
+  830  top 
+  831  ssh n49
+  832  ssh n50
+  833  ssh n51
+  834  ssh n52
+  835  sinfo
+  836  cd polymers/
+  837  git add .
+  838  cd polymers/
+  839  git add .
+  840  git commit -m "finished all t1.2 except k50 and started new sessions"
+  841  git push
+  842  squeue
+  843  squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me # show the full names of all your jobs
+  844  top n54
+  845  ssh n54
+  846  top 
+  847  ssh n57
+  848  top
+  849  cd polymers/
+  850  squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me # show the full names of all your jobs
+  851  vim kkk/ttt/*.inp
+  852  squeue
+  853  more k50/t1.2/out
+  854  tail k50/t1.2/out
+  855  tail k100/t1.1/out
+  856  tail k100/t1.0/out
+  857  tail k10/t1.0/out
+  858  git add .
+  859  git commit -m "t1.1, t1.0 finished for all except k50"
+  860  git push
+  861  squeue
+  862  ls k50/
+  863  ls k50/t1.0
+  864  cd k50/t1.0
+  865  sinfo
+  866  vim cpu.sub 
+  867  sbatch cpu.sub 
+  868  vim *.inp
+  869  cd ../
+  870  cd ..
+  871  ls k50
+  872  vim generate_kt.sh 
+  873  sh generate_kt.sh 50 1.1
+  874  cd k50/t1.1
+  875  sbatch cpu.sub 
+  876  squeue
+  877  git add .
+  878  cd ../..
+  879  cd k2/t1.1
+  880  ls
+  881  more out
+  882  tail out
+  883  tail -50 out
+  884  cd ../..
+  885  git add .
+  886  git commit -m "finished k2t1.1, k5t1.1, started k50t1.0-1.1"
+  887  git push
+  888  sh generate_kt.sh 1 0.9
+  889  sh generate_kt.sh 2 0.9
+  890  sh generate_kt.sh 5 0.9
+  891  sh generate_kt.sh 10 0.9
+  892  sh generate_kt.sh 20 0.9
+  893  sh generate_kt.sh 50 0.9
+  894  sh generate_kt.sh 100 0.9
+  895  vim k*/t0.9/cpu.sub
+  896  sinfo
+  897  squeue
+  898  vim k*/t0.9/cpu.sub
+  899  cd k1/t0.9 && sbatch cpu.sub && ../..
+  900  cd ../../; cd k1/t0.9/; sbatch cpu.sub; cd ../..
+  901  cd k2/t0.9/; sbatch cpu.sub; cd ../..
+  902  cd k5/t0.9/; sbatch cpu.sub; cd ../..
+  903  cd k10/t0.9/; sbatch cpu.sub; cd ../..
+  904  cd k20/t0.9/; sbatch cpu.sub; cd ../..
+  905  cd k50/t0.9/; sbatch cpu.sub; cd ../..
+  906  cd k100/t0.9/; sbatch cpu.sub; cd ../..
+  907  squeue
+  908  scancel 1005725
+  909  squeue
+  910  squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me # show the full names of all your jobs
+  911  git add .
+  912  git commit -m "started all t0.9"
+  913  git push
+  914  cd polymers/
+  915  git add .
+  916  git commit -m "finished all t0.9"
+  917  git push
+  918  clear
+  919  ls
+  920  vim generate_kt.sh 
+  921  sh generate_kt.sh 12 0.4
+  922  ls
+  923  cd k12
+  924  ls
+  925  ls 50.4
+  926  ls t0.4/
+  927  more t0.4/cpu.sub 
+  928  more t0.4/k12t0.4p0.0f5n8000npt.inp 
+  929  cd ../..
+  930  cd polymers/
+  931  ls
+  932  \rm -r k12
+  933  ls
+  934  sh generate_kt.sh 1 0.8
+  935  \rm -r k1/t0.8
+  936  sh generate_kt.sh 1 0.8
+  937  ls k1
+  938  rm -r k1/t0.8
+  939  ls
+  940  sh generate_kt.sh 1 0.8
+  941  cd k1/t0.8/
+  942  ls
+  943  vim cpu.sub 
+  944  sinfo
+  945  vim cpu.sub 
+  946  sbatch cpu.sub 
+  947  squeue
+  948  more out
+  949  cd ../..
+  950  cd kkk/ttt
+  951  vim *.inp
+  952  cd ../..
+  953  rm -r t1/k0.8
+  954  rm -r k1/t0.8
+  955  sh generate_kt.sh 1 0.8
+  956  cd k1/t0.8
+  957  sbatch cpu.sub 
+  958  squeue
+  959  more out
+  960  squeue
+  961  vim *.inp
+  962  sbatch cpu.sub 
+  963  squeue
+  964  more out
+  965  vim *.inp
+  966  sbatch cpu.sub 
+  967  squeue
+  968  more uot
+  969  more out
+  970  vim *.inp
+  971  sbatch cpu.sub 
+  972  squeue
+  973  more out
+  974  vim cpu.sub 
+  975  vim *.inp
+  976  sbatch cpu.sub 
+  977  squeue
+  978  more out
+  979  vim *.inp
+  980  sbatch cpu.sub 
+  981  squeue
+  982  more out
+  983  vim *.inp
+  984  sbatch cpu.sub 
+  985  more out
+  986  sbatch cpu.sub 
+  987  squeue
+  988  more out
+  989  vim *.inp
+  990  sbatch cpu.sub 
+  991  more out
+  992  squeue
+  993  vim *.inp
+  994  cd polymers/
+  995  git add .
+  996  git commit -m "k1/t0.8 is now a test dir"
+  997  git push
+  998  cd polymer
+  999  cd polymers/
+ 1000  sh generate_kt.sh 5 0.7
+ 1001  cd k5/t0.7
+ 1002  ls -lrt
+ 1003  cd ../..
+ 1004  \rm -r k5/t0.7
+ 1005  sh generate_kt.sh 5 0.7
+ 1006  cd k5/t0.7
+ 1007  sinfo
+ 1008  vim cpu.sub 
+ 1009  vim *.inp
+ 1010  sbatch cpu.sub 
+ 1011  squeue
+ 1012  more out
+ 1013  cd ../..
+ 1014  sh generate_kt.sh 5 0.7
+ 1015  cd k5/t0.7
+ 1016  vim *.inp
+ 1017  sbatch cpu.sub 
+ 1018  squeue
+ 1019  more out
+ 1020  cd ../..
+ 1021  sh generate_kt.sh 5 0.7
+ 1022  cd k5/t0.7
+ 1023  vim *.inp
+ 1024  sbatch cpu.sub 
+ 1025  cd ../..
+ 1026  squeue
+ 1027  cd k0.5/t0.8
+ 1028  cd k5/t0.7
+ 1029  ls
+ 1030  more out
+ 1031  cd ../..
+ 1032  sh generate_kt.sh 5 0.7
+ 1033  \rm -r k5/t0.7
+ 1034  sh generate_kt.sh 5 0.7
+ 1035  ls
+ 1036  \rm -r k5/t0.7
+ 1037  sh generate_kt.sh 5 0.7
+ 1038  \rm -r k5/t0.7
+ 1039  sh generate_kt.sh 5 0.7
+ 1040  cd k5/t0.7/
+ 1041  ls
+ 1042  vim *.inp
+ 1043  sbatch cpu.sub 
+ 1044  squeue
+ 1045  more out
+ 1046  cd ../..
+ 1047  cd kkk/ttt
+ 1048  vim *.inp
+ 1049  cd ../..
+ 1050  history > history_for_print.txt

@@ -1,0 +1,49 @@
+#!/bin/bash
+# Slurm will IGNORE all lines after the FIRST BLANK LINE,
+# even the ones containing #SBATCH.
+# Always put your SBATCH parameters at the top of your batch script.
+#
+# GENERAL
+#SBATCH --job-name="k1t0.7p0.0n8000f5"
+#SBATCH --output=out   # or both in default file
+#SBATCH --error=err    # slurm-$SLURM_JOBID.out
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=mhanrahan@wesleyan.edu
+#
+# NODE control
+#SBATCH -N 1
+#
+# CPU control
+#SBATCH -n 8     # tasks=S*C*T (default is 1)
+##SBATCH --ntasks-per-node=8
+##SBATCH --cpus-per-task=1
+##SBATCH -B 1:1:1 # S:C:T=sockets/node:cores/socket:threads/core
+#SBATCH --mem=50
+###SBATCH -B 2:4:1 # S:C:T=sockets/node:cores/socket:threads/core
+###SBATCH --cpus-per-gpu=1
+###SBATCH --mem-per-gpu=7168
+#
+# GPU control
+###SBATCH --gres=gpu:geforce_gtx_1080_ti:1  # n78
+###SBATCH --gres=gpu:quadro_rtx_5000:1  # n[100-101]
+#
+# Node control
+#SBATCH --partition=tinymem
+#SBATCH --nodelist=n53
+
+
+# unique job scratch dirs
+#MYSANSCRATCH=/sanscratch/$SLURM_JOB_ID
+#MYLOCALSCRATCH=/localscratch/$SLURM_JOB_ID
+#export MYSANSCRATCH MYLOCALSCRATCH
+#cd $MYLOCALSCRATCH
+
+# set if needed. try stacking on same gpu, max=4
+###export CUDA_VISIBLE_DEVICES=0
+###export CUDA_VISIBLE_DEVICES=`gpu-free | sed 's/,/\n/g' | shuf | head -1`
+ldd /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi
+
+# feed the wrapper
+/share/apps/CENTOS6/openmpi/1.8.4/bin/mpirun -np 8 \
+ /share/apps/CENTOS6/lammps/3Mar2020/lmp_mpi \
+ -in k1t0.7p0.0f5n8000npt.inp

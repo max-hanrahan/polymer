@@ -2,16 +2,19 @@ PVAR=0.0
 NVAR=8000
 FVAR=5
 TSTEP=0.3
+EPS=1.0
 
 # read user input
 KVAR=$1
 TVAR=$2
 
-T_HIGH="$(echo "$TVAR + $TSTEP" | bc)"
+T_HIGH="$(echo "$TVAR + $TSTEP" | bc | awk '{printf "%.1f", $0}')"
+NUM_STIFF="$(echo "$FVAR * $NVAR /100" | bc)"
 
 printf "Pressure: $PVAR\n"
 printf "Num. Atoms: $NVAR\n"
-printf "Stiffened Chains: $FVAR percent \n"
+printf "Stiffened Chains: $FVAR%% ($NUM_STIFF atoms) \n"
+printf "Epsilon: $EPS\n"
 
 # if needed, make the specific directories
 mkdir -p k${KVAR}; mkdir -p k${KVAR}/t${TVAR}
@@ -26,6 +29,8 @@ sed -i "s/TTT/$TVAR/g" *; rename {TTT} ${TVAR} * # change all {ttt} -> specific 
 sed -i "s/ppp/$PVAR/g" *; rename {ppp} ${PVAR} * # etc...
 sed -i "s/nnn/$NVAR/g" *; rename {nnn} ${NVAR} * # etc...
 sed -i "s/fff/$FVAR/g" *; rename {fff} ${FVAR} * # etc...
+sed -i "s/t_high/$T_HIGH/g" *;
+
 
 # one more silly workaround for cpu.sub
 sed -i "s/{{k}}/$KVAR/g" cpu.sub; # change all {kkk} -> specific k

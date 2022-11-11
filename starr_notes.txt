@@ -226,3 +226,20 @@ I don't know high eps needs to be to unbundle these things. Start from the final
 
 10/31:
 todo: look at memory for exx96
+
+11/7:
+ Bond part of the potential does not exist on gpu. but in HOOMD they are on gpu.
+
+One of the things we should perhaps try is see if you can get your simulations running on HOOMD.
+Hamed left a tutorial on how to do this. It is all set up to control using python.
+
+if i don't remember, ask me to dig up hamed's example. believe he had a lj and also a polymer example.
+
+hamed is also pretty generous with his time.
+
+from cesar: the UNSTIFFENED chains are what
+
+may want to look at hamed's tutorials.
+
+q: what's the path file to extract_data.sh
+fstarr/bin/extract_data.sh

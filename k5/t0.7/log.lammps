@@ -8,8 +8,6 @@ variable n world 8000
 variable f world 5
 variable eps world 1.0 # todo: generalize this
 variable T_high world 1.0
-
-
 variable filename string k${k}t${T}p${p}f${f}n${n}npt
 variable filename string k5t${T}p${p}f${f}n${n}npt
 variable filename string k5t0.7p${p}f${f}n${n}npt
@@ -22,11 +20,6 @@ variable config string k5t1.0p${p}f${f}n${n}npt
 variable config string k5t1.0p0.0f${f}n${n}npt
 variable config string k5t1.0p0.0f5n${n}npt
 variable config string k5t1.0p0.0f5n8000npt
-
-#compute rod-rod energy:
-compute 1 all pair/local eng #todo: check that this is the right implementation
-compute 2 all reduce sum c_1
-
 
 log ${filename}.log
 log k5t0.7p0.0f5n8000npt.log
