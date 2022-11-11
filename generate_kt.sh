@@ -7,7 +7,11 @@ EPS=1.0
 # read user input
 KVAR=$1
 TVAR=$2
-
+if [[ $TVAR==1.2 ]]; then
+    T_HIGH=$TVAR
+elif [[ $TVAR -ge 0.9 ]]; then
+    T_STEP=0.1
+fi #todo: add more cases for future runs
 T_HIGH="$(echo "$TVAR + $TSTEP" | bc | awk '{printf "%.1f", $0}')"
 NUM_STIFF="$(echo "$FVAR * $NVAR /100" | bc)"
 

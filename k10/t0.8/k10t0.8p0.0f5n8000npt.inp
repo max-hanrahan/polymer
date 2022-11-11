@@ -53,12 +53,13 @@ fix cmvel all momentum 1000 linear 1 1 1
 
 # todo: find a way to store energy between two different types of poly chains
 thermo_style custom step ke pe etotal epair c_pairtotal c_epolymer c_erodrod ebond eangle press temp lx vol
-thermo 1000
+thermo 10
 
-dump 1 all xyz	100000	dump${filename}.xyz
-dump 2 all local 100000 rre.txt index c_erodrod
-dump 3 all local 100000 ppe.txt index c_epolymer
-dump 4 all local 100000 tot_e.txt index c_pairtotal
+dump 1 all xyz	10	dump${filename}.xyz
+dump 2 stiff local 10 rre.txt index c_1
+dump 3 polymer local 10 ppe.txt index c_2
+dump 4 all local 10 tot_e.txt index c_3
+
 
 restart 1000 ${filename}-1.res ${filename}-2.res
 
@@ -67,4 +68,4 @@ restart 1000 ${filename}-1.res ${filename}-2.res
 
 timestep 0.002
 
-run 10000000 upto
+run 20
