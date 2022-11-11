@@ -23,11 +23,16 @@ read_restart ${config}-1.res
 reset_timestep 0 # may wanna comment this out
 
 # define a group so we can reference the group id in the custom compute commands.
-group stiff type 1
+group polymer type 1
+group stiff type 2
 
 # compute rod-rod energy:
 compute 1 stiff pair/local eng #todo: riff this until we arrive at pair energy
 compute erodrod stiff reduce sum c_1
+compute 2 polymer pair/local eng #todo: riff this until we arrive at pair energy
+compute epolymer polymer reduce sum c_2
+compute 3 all pair/local eng #todo: riff this until we arrive at pair energy
+compute pairtotal all reduce sum c_3
 
 pair_style	lj/cut	2.5
 #when using global * * the cutoff should be the smallest of all possible pairs
@@ -47,10 +52,13 @@ fix	1	all npt	temp ${T} ${T}  1.0   iso ${p} ${p} 5.0
 fix cmvel all momentum 1000 linear 1 1 1
 
 # todo: find a way to store energy between two different types of poly chains
-thermo_style custom step ke pe etotal epair c_erodrod ebond eangle press temp lx vol
+thermo_style custom step ke pe etotal epair c_pairtotal c_epolymer c_erodrod ebond eangle press temp lx vol
 thermo 1000
 
 dump 1 all xyz	100000	dump${filename}.xyz
+dump 2 all local 100000 rre.txt index c_erodrod
+dump 3 all local 100000 ppe.txt index c_epolymer
+dump 4 all local 100000 tot_e.txt index c_pairtotal
 
 restart 1000 ${filename}-1.res ${filename}-2.res
 

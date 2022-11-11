@@ -1,3 +1,4 @@
+sh ~fstarr/bin/generate-data.sh k*/t*/*.log # generate all data and plop it into this polymers
 for dir in k*; do cp -i t0.5p0.0n8000npt.inp $dir; done; # copies the data file into every directory k.
 for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000npt.inp; done # rename all kkk to k-value for all k directories
 for dir in k*; do cd ${dir} && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories.
