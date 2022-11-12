@@ -4,7 +4,7 @@ for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000n
 for dir in k*; do cd ${dir} && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories.
 for dir in k*; do cd $dir && sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log  && cd ../; done; # extract data for each k-directory
 for dir in k*; do cp -i $dir/dump${dir:1}.xyz .; done; # copies each dump file back to the current directory
-
+for kdir in k{1,2,5,10,20,50,100}; do sh generate-kt.sh "${kdir:1} 1.1"; done # generate all k-directories for t = 1.1
 
 for kdir in k*; do mv $kdir/t0.5p0.0n8000npt* $kdir/t1.2; done; # move all t0.5 files to each appropriate t1.2 directory
 for kdir in k*; do rename $kdir/t1.2/t0.5p $kdir/t1.2/t1.2p *; done; # rename all t0.5 to t1.2
