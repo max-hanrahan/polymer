@@ -6,6 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+# LAMMPS-specific
+*.dat
+*.txt
+*.res
+*.xyz
+#*.log
+out
+err
+
 # Distribution / packaging
 .Python
 build/
