@@ -1,0 +1,25 @@
+LAMMPS (19 Mar 2020)
+# LAMMPS input file
+
+variable k world 100
+variable T world 0.8
+variable p world 0.0
+variable n world 8000
+variable f world 5
+variable eps world 1.0 # todo: generalize this
+variable T_high world 1.1
+variable filename string k${k}t${T}p${p}f${f}n${n}npt
+variable filename string k100t${T}p${p}f${f}n${n}npt
+variable filename string k100t0.8p${p}f${f}n${n}npt
+variable filename string k100t0.8p0.0f${f}n${n}npt
+variable filename string k100t0.8p0.0f5n${n}npt
+variable filename string k100t0.8p0.0f5n8000npt
+variable config string k${k}t${T_high}p${p}f${f}n${n}npt
+variable config string k100t${T_high}p${p}f${f}n${n}npt
+variable config string k100t1.1p${p}f${f}n${n}npt
+variable config string k100t1.1p0.0f${f}n${n}npt
+variable config string k100t1.1p0.0f5n${n}npt
+variable config string k100t1.1p0.0f5n8000npt
+
+log ${filename}.log
+log k100t0.8p0.0f5n8000npt.log
