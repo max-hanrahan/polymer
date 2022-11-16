@@ -4,13 +4,16 @@ for dir in k*; do sed s/kkk/${dir:1}/ t0.5p0.0n8000npt.inp > $dir/t0.5p0.0n8000n
 for dir in k*; do cd ${dir} && sbatch cpu.sub && cd ../; done; #submit as many jobs as there are k-directories.
 for dir in k*; do cd $dir && sh ~fstarr/bin/extract-data.sh t0.5p0.0n8000npt.log  && cd ../; done; # extract data for each k-directory
 for dir in k*; do cp -i $dir/dump${dir:1}.xyz .; done; # copies each dump file back to the current directory
-for kdir in k{1,2,5,10,20,50,100}; do sh generate-kt.sh "${kdir:1} 1.1"; done # generate all k-directories for t = 1.1
+for kdir in k{1,2,5,10,20,50,100}; do sh generate_kt.sh "${kdir:1} 1.0"; done # generate all k-directories for t = 1.0
+for knum in {1,2,5,10,20,50,100}; do for tnum in $(seq 0.6 0.1 0.8); do sh generate_kt.sh $knum $tnum; done; done; #ugly double for loop to generate all the directories between 0.6-0.8
+for knum in {1,2,5,10,20,50,100}; do for tnum in $(seq 0.45 0.05 0.55); do cd k$knum/t$tnum && sh ~fstarr/bin/extract-data.sh *.log  && cd ../..; done; done; #ugly loop to extract low-temp data but keep it in its own directory
+for knum in {1,2,5,10,20,50,100}; do for tnum in $(seq 0.45 0.05 0.55); do cd k$knum/t$tnum && awk '{print $3" "$11}' *.dat > pot_eng_v_temp.dat && cd ../..; done; done; #ugly loop to plot avg pe as function of temp (DO NOT USE IF THERE ARE ALREADY .dat's)
+
 
 for kdir in k*; do mv $kdir/t0.5p0.0n8000npt* $kdir/t1.2; done; # move all t0.5 files to each appropriate t1.2 directory
 for kdir in k*; do rename $kdir/t1.2/t0.5p $kdir/t1.2/t1.2p *; done; # rename all t0.5 to t1.2
 
 for dir in k*; do for i in $(seq 0.5 0.1 1.2); do mkdir ${dir}/t$i; done; done; # creates the temperature directories in each k-directory.
-
 xmgrace -block k1/t0.5p0.0n8000npt.dat -bxy 1:7 -block k2/t0.5p0.0n8000npt.dat -bxy 1:7 -block k5/t0.5p0.0n8000npt.dat -bxy 1:7 -block k10/t0.5p0.0n8000npt.dat -bxy 1:7 -block k20/t0.5p0.0n8000npt.dat -bxy 1:7 -block k50/t0.5p0.0n8000npt.dat -bxy 1:7 -block k100/t0.5p0.0n8000npt.dat -bxy 1:7 # heinous command to load in all the data
 
 history > history_for_print.txt # creates a text file of full command-line history
@@ -20,3 +23,7 @@ cp -r t1.0/. t0.9/ # copy files without the parent folder
 squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --me # show the full names of all your jobs
 
 ls -I "*.res # list all files in directory not of extension ".res"
+
+# VIM
+# get rid of every windows-style line ending
+%s/\r//g

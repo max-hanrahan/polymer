@@ -7,18 +7,33 @@ EPS=1.0
 # read user input
 KVAR=$1
 TVAR=$2
-if [[ $TVAR==1.2 ]]; then
+
+# optional vars: node number (def 46) and restart (default False)
+NODEVAR=${3:-46}
+RESTART=${4:-false}
+
+# this is to get the value of t_high right (I suppose I could've made a function)
+if echo "$TVAR > 0.9" | bc -l | grep -q 1; then
+    T_HIGH=1.2
+elif echo "$TVAR > 0.6" | bc -l | grep -q 1; then
+    T_HIGH="$(echo "$TVAR + $TSTEP" | bc | awk '{printf "%.1f", $0}')" # for TVAR = 0.6-0.8
+elif echo "$TVAR >= 0.45" | bc -l | grep -q 1; then
+    T_HIGH="$(echo "2*$TVAR - $TSTEP" | bc | awk '{printf "%.1f", $0}')" # for TVAR = 0.6-0.8
+fi
+
+if $RESTART; then
     T_HIGH=$TVAR
-elif [[ $TVAR -ge 0.9 ]]; then
-    T_STEP=0.1
-fi #todo: add more cases for future runs
-T_HIGH="$(echo "$TVAR + $TSTEP" | bc | awk '{printf "%.1f", $0}')"
+    
+fi
+
 NUM_STIFF="$(echo "$FVAR * $NVAR /100" | bc)"
 
+printf "Inputted: k= $KVAR, T = $TVAR\n"
+printf "Node = $NODEVAR, Restart = $RESTART\n\n"
 printf "Pressure: $PVAR\n"
 printf "Num. Atoms: $NVAR\n"
 printf "Stiffened Chains: $FVAR%% ($NUM_STIFF atoms) \n"
-printf "Epsilon: $EPS\n"
+printf "Epsilon: $EPS\n\n"
 
 # if needed, make the specific directories
 mkdir -p k${KVAR}; mkdir -p k${KVAR}/t${TVAR}
@@ -43,4 +58,6 @@ sed -i "s/{{p}}/$PVAR/g" cpu.sub; # etc...
 sed -i "s/{{n}}/$NVAR/g" cpu.sub; # etc...
 sed -i "s/{{f}}/$FVAR/g" cpu.sub; # etc...
 
-# sbatch cpu.sub && cd ../../
+sed -i "s/NN/$NODEVAR/g" cpu.sub;
+
+sbatch cpu.sub && cd ../../
