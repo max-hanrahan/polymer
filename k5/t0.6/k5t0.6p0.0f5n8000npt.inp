@@ -6,7 +6,7 @@ variable p world 0.0
 variable n world 8000
 variable f world 5
 variable eps world 1.0 # todo: generalize this
-variable T_high world 0.9
+variable T_high world 0.6
 variable filename string k${k}t${T}p${p}f${f}n${n}npt
 variable config string k${k}t${T_high}p${p}f${f}n${n}npt
 
@@ -20,14 +20,21 @@ atom_style	angle
 angle_style	cosine
 #read_data ${filename}.lmp # use this if first time running
 read_restart ${config}-1.res
-reset_timestep 0 # may wanna comment this out
+#reset_timestep 0 # may wanna comment this out
 
 # define a group so we can reference the group id in the custom compute commands.
-group stiff type 1
+group polymer type 1
+group stiff type 2
 
-# compute rod-rod energy:
-compute 1 stiff pair/local eng #todo: riff this until we arrive at pair energy
-compute erodrod stiff reduce sum c_1
+# compute rod-rod energy; the reduce yields (rod-rod energy) / Ntotal
+# where Ntotal = N = Npoly + Nrod
+compute 1 stiff pair/local eng
+compute erodrod stiff reduce sum c_1 # todo: see if i can renorm by N/Nrod, etc.
+# compute poly-poly energy; the reduce yields (poly-poly energy) / Ntotal
+compute 2 polymer pair/local eng
+compute epolymer polymer reduce sum c_2
+compute 3 all pair/local eng
+compute pairtotal all reduce sum c_3
 
 pair_style	lj/cut	2.5
 #when using global * * the cutoff should be the smallest of all possible pairs
@@ -47,10 +54,13 @@ fix	1	all npt	temp ${T} ${T}  1.0   iso ${p} ${p} 5.0
 fix cmvel all momentum 1000 linear 1 1 1
 
 # todo: find a way to store energy between two different types of poly chains
-thermo_style custom step ke pe etotal epair c_erodrod ebond eangle press temp lx vol
+thermo_style custom step ke pe etotal epair c_epolymer c_erodrod ebond eangle press temp lx vol
 thermo 1000
 
 dump 1 all xyz	100000	dump${filename}.xyz
+dump 2 all local 100000 rre.txt index c_1
+dump 3 all local 100000 ppe.txt index c_2
+dump 4 all local 100000 tot_e.txt index c_3
 
 restart 1000 ${filename}-1.res ${filename}-2.res
 
