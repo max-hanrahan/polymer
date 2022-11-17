@@ -29,7 +29,7 @@
 #
 # Node control
 #SBATCH --partition=tinymem
-#SBATCH --nodelist=n52
+#SBATCH --nodelist=n56
 
 
 # unique job scratch dirs
