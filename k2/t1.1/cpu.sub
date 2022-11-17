@@ -4,7 +4,7 @@
 # Always put your SBATCH parameters at the top of your batch script.
 #
 # GENERAL
-#SBATCH --job-name="k=2,t=1.1,p=0.0,n=8000,f=5"
+#SBATCH --job-name="k2t1.1p0.0n8000f5"
 #SBATCH --output=out   # or both in default file
 #SBATCH --error=err    # slurm-$SLURM_JOBID.out
 #SBATCH --mail-type=END,FAIL
@@ -29,7 +29,7 @@
 #
 # Node control
 #SBATCH --partition=tinymem
-#SBATCH --nodelist=n57
+#SBATCH --nodelist=n54
 
 
 # unique job scratch dirs
